@@ -181,19 +181,6 @@ def download_atmosphere(module, temp_directory, kosmos_version, kosmos_build):
     common.mkdir(temp_directory.joinpath('bootloader/payloads'))
     common.move(payload_path, temp_directory.joinpath('bootloader/payloads/fusee-primary.bin'))
 
-    common.mkdir(temp_directory.joinpath('atmosphere/exefs_patches/bootlogo'))
-    common.copy_module_file('atmosphere', '3EC573CB22744A993DFE281701E9CBFE66C03ABD.ips', temp_directory.joinpath('atmosphere/exefs_patches/bootlogo/3EC573CB22744A993DFE281701E9CBFE66C03ABD.ips'))
-    common.copy_module_file('atmosphere', '7B4123290DE2A6F52DE4AB72BEA1A83D11214C71.ips', temp_directory.joinpath('atmosphere/exefs_patches/bootlogo/7B4123290DE2A6F52DE4AB72BEA1A83D11214C71.ips'))
-    common.copy_module_file('atmosphere', '7C5894688EDA24907BC9CE7013630F365B366E4A.ips', temp_directory.joinpath('atmosphere/exefs_patches/bootlogo/7C5894688EDA24907BC9CE7013630F365B366E4A.ips'))
-    common.copy_module_file('atmosphere', '723DF02F6955D903DF7134105A16D48F06012DB1.ips', temp_directory.joinpath('atmosphere/exefs_patches/bootlogo/723DF02F6955D903DF7134105A16D48F06012DB1.ips'))
-    common.copy_module_file('atmosphere', '967F4C3DFC7B165E4F7981373EC1798ACA234A45.ips', temp_directory.joinpath('atmosphere/exefs_patches/bootlogo/967F4C3DFC7B165E4F7981373EC1798ACA234A45.ips'))
-    common.copy_module_file('atmosphere', '01890C643E9D6E17B2CDA77A9749ECB9A4F676D6.ips', temp_directory.joinpath('atmosphere/exefs_patches/bootlogo/01890C643E9D6E17B2CDA77A9749ECB9A4F676D6.ips'))
-    common.copy_module_file('atmosphere', '7421EC6021AC73DD60A635BC2B3AD6FCAE2A6481.ips', temp_directory.joinpath('atmosphere/exefs_patches/bootlogo/7421EC6021AC73DD60A635BC2B3AD6FCAE2A6481.ips'))
-    common.copy_module_file('atmosphere', '96529C3226BEE906EE651754C33FE3E24ECAE832.ips', temp_directory.joinpath('atmosphere/exefs_patches/bootlogo/96529C3226BEE906EE651754C33FE3E24ECAE832.ips'))
-    common.copy_module_file('atmosphere', '98446A07BC664573F1578F3745C928D05AB73349.ips', temp_directory.joinpath('atmosphere/exefs_patches/bootlogo/98446A07BC664573F1578F3745C928D05AB73349.ips'))
-    common.copy_module_file('atmosphere', '0767302E1881700608344A3859BC57013150A375.ips', temp_directory.joinpath('atmosphere/exefs_patches/bootlogo/0767302E1881700608344A3859BC57013150A375.ips'))
-    common.copy_module_file('atmosphere', 'C088ADC91417EBAE6ADBDF3E47946858CAFE1A82.ips', temp_directory.joinpath('atmosphere/exefs_patches/bootlogo/C088ADC91417EBAE6ADBDF3E47946858CAFE1A82.ips'))
-
     common.copy_module_file('atmosphere', 'system_settings.ini', temp_directory.joinpath('atmosphere/config/system_settings.ini'))
 
     if not kosmos_build:
@@ -211,14 +198,8 @@ def download_hekate(module, temp_directory, kosmos_version, kosmos_build):
         zip_ref.extractall(temp_directory)
 
     common.delete(bundle_path)
-    
-    common.mkdir(temp_directory.joinpath('bootloader/bean'))
-    common.copy_module_file('hekate', 'Logo.bmp', temp_directory.joinpath('bootloader/bean/Logo.bmp'))
-    common.copy_module_file('hekate', 'stock.bmp', temp_directory.joinpath('bootloader/bean/stock.bmp'))
-    common.copy_module_file('hekate', 'eummclogo.bmp', temp_directory.joinpath('bootloader/bean/eummclogo.bmp'))
-    common.copy_module_file('hekate', 'bootlogo.bmp', temp_directory.joinpath('bootloader/bootlogo.bmp'))
+
     common.copy_module_file('hekate', 'hekate_ipl.ini', temp_directory.joinpath('bootloader/hekate_ipl.ini'))
-    common.copy_module_file('hekate', 'eummc.bmp', temp_directory.joinpath('bootloader/eummc.bmp'))
     common.sed('KOSMOS_VERSION', kosmos_version, temp_directory.joinpath('bootloader/hekate_ipl.ini'))
 
     payload = common.find_file(temp_directory.joinpath('hekate_ctcaer_*.bin'))

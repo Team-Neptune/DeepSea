@@ -15,7 +15,7 @@
 #
 # You should have received a copy of the GNU General Public License
 # along with this program; if not, write to the Free Software
-# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 
+# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
 # 02110-1301, USA.
 #
 
@@ -27,24 +27,28 @@ from pathlib import Path
 import shutil
 import sys
 
+
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument(
         '-v', '--version',
         default=None,
         type=str,
-        help='Overrides the Kosmos Version from the config file.',
-        metavar='KosmosVersion')
+        help='Overrides the DeepSea Version from the config file.',
+        metavar='DeepSeaVersion')
     subparsers = parser.add_subparsers()
 
     # Kosmos subcommands
-    parser_kosmos = subparsers.add_parser('beanNX', help='Create a release build of Kosmos.')
+    parser_kosmos = subparsers.add_parser(
+        'deepsea', help='Create a release build of DeepSea.')
     parser_kosmos.add_argument('output', help='Zip file to create.')
     parser_kosmos.set_defaults(command=common.Command.Kosmos)
 
     # SDSetup subcommands
-    parser_sdsetup = subparsers.add_parser('sdsetup', help='Create a Kosmos modules for SDSetup.')
-    parser_sdsetup.add_argument('output', help='Directory to output modules to.')
+    parser_sdsetup = subparsers.add_parser(
+        'sdsetup', help='Create a DeepSea modules for SDSetup.')
+    parser_sdsetup.add_argument(
+        'output', help='Directory to output modules to.')
     parser_sdsetup.add_argument(
         '-a', '--auto',
         action='store_true',
@@ -53,7 +57,8 @@ def parse_args():
     parser_sdsetup.set_defaults(command=common.Command.SDSetup)
 
     # Kosmos Minimal subcommands
-    parser_kosmos = subparsers.add_parser('beanNX-mini', help='Create a release build of Kosmos Minimal.')
+    parser_kosmos = subparsers.add_parser(
+        'deepsea-mini', help='Create a release build of DeepSea Minimal.')
     parser_kosmos.add_argument('output', help='Zip file to create.')
     parser_kosmos.set_defaults(command=common.Command.KosmosMinimal)
 
@@ -66,19 +71,22 @@ def parse_args():
 
     return args
 
+
 def get_kosmos_version(args):
     if args.version is not None:
         return args.version
     return config.version
 
+
 def init_version_messages(args, kosmos_version):
     if args.command == common.Command.Kosmos:
-        return [ f'BeanNX {kosmos_version} built with:' ]
+        return [f'DeepSea {kosmos_version} built with:']
     elif args.command == common.Command.SDSetup and not args.auto:
-        return [ 'SDSetup Modules built with:' ]
+        return ['SDSetup Modules built with:']
     elif args.command == common.Command.KosmosMinimal:
-        return [ f'BeanNX Minimal {kosmos_version} built with:' ]
+        return [f'DeepSea Minimal {kosmos_version} built with:']
     return []
+
 
 if __name__ == '__main__':
     args = parse_args()
@@ -93,13 +101,14 @@ if __name__ == '__main__':
 
     version_messages = init_version_messages(args, kosmos_version)
 
-    build_messages = modules.build(temp_directory, kosmos_version, args.command, auto_build)
+    build_messages = modules.build(
+        temp_directory, kosmos_version, args.command, auto_build)
 
     common.delete(args.output)
 
     if build_messages is not None:
         version_messages += build_messages
-        
+
         if args.command == common.Command.SDSetup:
             common.move(temp_directory, args.output)
         else:

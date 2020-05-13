@@ -50,7 +50,7 @@ Send the Hekate payload to your Switch in RCM mode and launch the CFW
 
 
 ## Credits
-* I gotta thank Daniel 💻#7205 aka Daniel C for creating the discord with me
-* Slluxx#8184 For helping me with a boat load of stuff and choosing the name of the CFW package for us
+* Thanks to Daniel 💻#7205 aka Daniel C for creating the discord with me
+* Slluxx#8184 For helping us with a boat load of stuff and choosing the name of the CFW package for us
 * FennecTECH#4926 For spamming the discord chat full of images
 * And seasonal coochie#8888 for boosting the server and also voicing his opinion

@@ -1,9 +1,32 @@
-# DeepSea
-## DeepSea the all new CFW package for the Nintendo Switch
+<img src="assets/deepsea_wide.png" align="center" width="100%" />
 
-#### If you are having some trouble setting anything up you can join the [discord](http://invite.sdshrekup.com)
+DeepSea - The new All-in-One CFW package for the Nintendo Switch.
 
-##### This CFW package comes with these applications:
+![Discord](https://img.shields.io/discord/703301751171973190?label=Join%20DeepSea%20on%20Discord)
+
+---
+
+## Features
+* Vanilla Atmosphère
+* Always up-to-date packages
+* Background FTP Server
+* Updating directly from your console
+* Customize button bindings
+* Easy drag and drop install
+* Ability to enable autoboot without touching config files
+* Starting and reloading system modules without restarting
+* The latest and greatest homebrew from the scene
+* **and much more!**
+
+
+## How to use
+Follow this guide to hack your switch: https://switch.homebrew.guide
+
+Download the latest release and put it on your SD Card</br>
+Send the Hekate payload to your Switch in RCM mode and launch the CFW
+
+
+## Featuring
 * [Atmosphère](https://github.com/Atmosphere-NX/Atmosphere)
 * [Hekate](https://github.com/CTCaer/hekate)
 * [Homebrew App Store](https://gitlab.com/4TU/hb-appstore)

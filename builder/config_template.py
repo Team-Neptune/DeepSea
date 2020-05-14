@@ -1,5 +1,5 @@
-# Current version of Kosmos
-version = 'v15.1'
+# Current version of DeepSea
+version = 'v1.0.0'
 
 # GitHub Login Information
 github_username = ''

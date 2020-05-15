@@ -20,10 +20,10 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Compile DeepSea Zip
       run: |
-        ./builder.py deepsea output="./deepsea.zip"
+        ./builder/builder.py deepsea output="./deepsea.zip"
     - name: Compile DeepSea-minimal Zip
       run: |
-        ./builder.py deepsea-mini output="./deepsea-minimal.zip"
+        ./builder/builder.py deepsea-mini output="./deepsea-minimal.zip"
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1
@@ -41,7 +41,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
           upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
-          asset_path: ./deepsea.zip
+          asset_path: ./builder/deepsea.zip
           asset_name: deepsea_v1.0.0.zip
           asset_content_type: application/zip
     - name: Upload Release Asset - DeepSea-Minimal
@@ -51,6 +51,6 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
           upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
-          asset_path: ./deepsea.zip
+          asset_path: ./builder/deepsea.zip
           asset_name: deepsea_v1.0.0.zip
           asset_content_type: application/zip

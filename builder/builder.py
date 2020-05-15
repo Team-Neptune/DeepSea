@@ -72,7 +72,7 @@ def parse_args():
     return args
 
 
-def get_kosmos_version(args):
+def get_deepsea_version(args):
     if args.version is not None:
         return args.version
     return config.version
@@ -93,16 +93,16 @@ if __name__ == '__main__':
 
     temp_directory = common.generate_temp_path()
     common.mkdir(temp_directory)
-    kosmos_version = get_kosmos_version(args)
+    deepsea_version = get_deepsea_version(args)
 
     auto_build = False
     if hasattr(args, 'auto'):
         auto_build = args.auto
 
-    version_messages = init_version_messages(args, kosmos_version)
+    version_messages = init_version_messages(args, deepsea_version)
 
     build_messages = modules.build(
-        temp_directory, kosmos_version, args.command, auto_build)
+        temp_directory, deepsea_version, args.command, auto_build)
 
     common.delete(args.output)
 

@@ -225,7 +225,7 @@ def download_hekate(module, temp_directory, kosmos_version, kosmos_build):
 
     common.copy_module_file('hekate', 'hekate_ipl.ini',
                             temp_directory.joinpath('bootloader/hekate_ipl.ini'))
-    common.sed('KOSMOS_VERSION', kosmos_version,
+    common.sed('DEEPSEA_VERSION', kosmos_version,
                temp_directory.joinpath('bootloader/hekate_ipl.ini'))
 
     payload = common.find_file(temp_directory.joinpath('hekate_ctcaer_*.bin'))
@@ -386,7 +386,7 @@ def download_kosmos_updater(module, temp_directory, kosmos_version, kosmos_build
         'switch/KosmosUpdater/KosmosUpdater.nro'))
     common.copy_module_file('kosmos-updater', 'internal.db',
                             temp_directory.joinpath('switch/KosmosUpdater/internal.db'))
-    common.sed('KOSMOS_VERSION', kosmos_version,
+    common.sed('DEEPSEA_VERSION', kosmos_version,
                temp_directory.joinpath('switch/KosmosUpdater/internal.db'))
 
     return get_version(module, release, 0)

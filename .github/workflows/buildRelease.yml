@@ -27,10 +27,11 @@ jobs:
         echo -e "version = 'v1.0.0'\ngithub_username = '$gitUser'\ngithub_password = '$gitPass'\ngitlab_private_access_token = '$gitToken'"> ./builder/config.py
     - name: Compile DeepSea Zip
       run: |
-        sudo python ./builder/builder.py deepsea output="./deepsea.zip"
+        cd ./builder
+        python ./builder.py deepsea output="./deepsea.zip"
     - name: Compile DeepSea-minimal Zip
       run: |
-        sudo python ./builder/builder.py deepsea-mini output="./deepsea-minimal.zip"
+        python ./builder.py deepsea-mini output="./deepsea-minimal.zip"
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1

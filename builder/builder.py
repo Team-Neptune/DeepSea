@@ -80,15 +80,12 @@ def get_kosmos_version(args):
 
 def init_version_messages(args, kosmos_version):
     if args.command == common.Command.Kosmos:
-        returnstring = "DeepSea {} built with:".format(kosmos_version)
-        return returnstring
+        return [f'DeepSea {kosmos_version} built with:']
     elif args.command == common.Command.SDSetup and not args.auto:
-        returnstring = "SDSetup Modules built with:"
-        return returnstring
+        return ['SDSetup Modules built with:']
     elif args.command == common.Command.KosmosMinimal:
-        returnstring = "DeepSea Minimal {} built with:".format(kosmos_version)
-        return returnstring
-    return ""
+        return [f'DeepSea Minimal {kosmos_version} built with:']
+    return []
 
 
 if __name__ == '__main__':

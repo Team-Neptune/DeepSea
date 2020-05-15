@@ -13,7 +13,7 @@ jobs:
     - name: Set up Python 3.8
       uses: actions/setup-python@v1
       with:
-        python-version: 3.5.9
+        python-version: 3.8.2
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
@@ -28,10 +28,10 @@ jobs:
     - name: Compile DeepSea Zip
       run: |
         cd ./builder
-        python ./builder.py deepsea output="./deepsea.zip"
+        python ./builder.py -v v1.0.0 deepsea output="./deepsea.zip"
     - name: Compile DeepSea-minimal Zip
       run: |
-        python ./builder.py deepsea-mini output="./deepsea-minimal.zip"
+        python ./builder.py -v v1.0.0 deepsea-mini output="./deepsea-minimal.zip"
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1

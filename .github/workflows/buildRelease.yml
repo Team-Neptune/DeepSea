@@ -30,6 +30,7 @@ jobs:
         python ./builder.py -v v1.0.0 deepsea output="./deepsea.zip"
     - name: Compile DeepSea-minimal Zip
       run: |
+        cd ./builder
         python ./builder.py -v v1.0.0 deepsea-mini output="./deepsea-minimal.zip"
     - name: Create Release
       id: create_release

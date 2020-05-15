@@ -24,8 +24,7 @@ jobs:
         gitToken: ${{ secrets.SLX_GIT_TOKEN }}
         gitUser: ${{ secrets.SLX_GIT_USER }}
       run: | 
-        echo -e "version = 'v1.0.0'\ngithub_username = '$gitUser'\ng
-ithub_password = '$gitPass'\ngitlab_private_access_token = '$gitToken'"> ./builder/config.py
+        echo -e "version = 'v1.0.0'\ngithub_username = '$gitUser'\ngithub_password = '$gitPass'\ngitlab_private_access_token = '$gitToken'"> ./builder/config.py
     - name: Compile DeepSea Zip
       run: |
         sudo python ./builder/builder.py deepsea output="./deepsea.zip"

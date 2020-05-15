@@ -260,15 +260,12 @@ def download_hekate_icons(module, temp_directory, deepsea_version, deepsea_build
     with zipfile.ZipFile(bundle_path, 'r') as zip_ref:
         zip_ref.extractall(temp_directory)
 
+  
     common.delete(bundle_path)
-    common.move(temp_directory.joinpath('bootloader/res/icon_payload.bmp'),
-                temp_directory.joinpath('bootloader/res/icon_payload_hue.bmp'))
-    common.move(temp_directory.joinpath('bootloader/res/icon_payload_custom.bmp'),
-                temp_directory.joinpath('bootloader/res/icon_payload.bmp'))
-    common.move(temp_directory.joinpath('bootloader/res/icon_switch.bmp'),
-                temp_directory.joinpath('bootloader/res/icon_switch_hue.bmp'))
-    common.move(temp_directory.joinpath('bootloader/res/icon_switch_custom.bmp'),
-                temp_directory.joinpath('bootloader/res/icon_switch.bmp'))
+    common.move(temp_directory.joinpath('bootloader/res/icon_payload.bmp'), temp_directory.joinpath('bootloader/res/icon_payload_hue.bmp'))
+    common.move(temp_directory.joinpath('bootloader/res/icon_payload_custom.bmp'), temp_directory.joinpath('bootloader/res/icon_payload.bmp'))
+    common.move(temp_directory.joinpath('bootloader/res/icon_switch.bmp'), temp_directory.joinpath('bootloader/res/icon_switch_hue.bmp'))
+    common.move(temp_directory.joinpath('bootloader/res/icon_switch_custom.bmp'), temp_directory.joinpath('bootloader/res/icon_switch.bmp'))
 
     return get_version(module, release, 0)
 

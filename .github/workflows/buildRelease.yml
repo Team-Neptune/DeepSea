@@ -16,8 +16,8 @@ jobs:
         python-version: 3.8.2
     - name: Install dependencies
       run: |
-        sudo apt-get install python3-pip
-        if [ -f requirements.txt ]; then pip3 install -r requirements.txt; fi
+        python -m pip install --upgrade pip
+        if [ -f ./builder/requirements.txt ]; then pip3 install -r requirements.txt; fi
     - name: Create config script
       env:
         gitPass: ${{ secrets.SLX_GIT_PASS }}

@@ -20,10 +20,10 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Compile DeepSea Zip
       run: |
-        ./builder/builder.py deepsea output="./deepsea.zip"
+        sudo python ./builder/builder.py deepsea output="./deepsea.zip"
     - name: Compile DeepSea-minimal Zip
       run: |
-        ./builder/builder.py deepsea-mini output="./deepsea-minimal.zip"
+        sudo python ./builder/builder.py deepsea-mini output="./deepsea-minimal.zip"
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1

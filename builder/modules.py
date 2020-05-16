@@ -22,6 +22,7 @@ import common
 import config
 from github import Github
 from gitlab import Gitlab
+import os
 import json
 import re
 import shutil
@@ -29,6 +30,7 @@ import urllib.request
 import uuid
 import xmltodict
 import zipfile
+
 
 gh = Github(config.github_username, config.github_password)
 gl = Gitlab('https://gitlab.com',
@@ -223,7 +225,8 @@ def download_hekate(module, temp_directory, deepsea_version, deepsea_build):
 
     common.delete(bundle_path)
 
-    common.copy_module_file('hekate', 'bootlogo.bmp', temp_directory.joinpath('bootloader/bootlogo.bmp'))
+    common.copy_module_file('hekate', 'bootlogo.bmp',
+                            temp_directory.joinpath('bootloader/bootlogo.bmp'))
     common.copy_module_file('hekate', 'hekate_ipl.ini',
                             temp_directory.joinpath('bootloader/hekate_ipl.ini'))
     common.sed('DEEPSEA_VERSION', deepsea_version,
@@ -260,12 +263,18 @@ def download_hekate_icons(module, temp_directory, deepsea_version, deepsea_build
     with zipfile.ZipFile(bundle_path, 'r') as zip_ref:
         zip_ref.extractall(temp_directory)
 
-  
     common.delete(bundle_path)
-    common.move(temp_directory.joinpath('bootloader/res/icon_payload.bmp'), temp_directory.joinpath('bootloader/res/icon_payload_hue.bmp'))
-    common.move(temp_directory.joinpath('bootloader/res/icon_payload_custom.bmp'), temp_directory.joinpath('bootloader/res/icon_payload.bmp'))
-    common.move(temp_directory.joinpath('bootloader/res/icon_switch.bmp'), temp_directory.joinpath('bootloader/res/icon_switch_hue.bmp'))
-    common.move(temp_directory.joinpath('bootloader/res/icon_switch_custom.bmp'), temp_directory.joinpath('bootloader/res/icon_switch.bmp'))
+    shutil.move(os.path.join(temp_directory, 'bootloader', 'res', 'icon_payload.bmp'),
+                os.path.join(temp_directory, 'bootloader', 'res', 'icon_payload_o.bmp'))
+
+    shutil.move(os.path.join(temp_directory, 'bootloader', 'res', 'icon_switch.bmp'),
+                os.path.join(temp_directory, 'bootloader', 'res', 'icon_switch_o.bmp'))
+
+    shutil.move(os.path.join(temp_directory, 'bootloader', 'res', 'payload.bmp'),
+                os.path.join(temp_directory, 'bootloader', 'res', 'icon_payload.bmp'))
+
+    shutil.move(os.path.join(temp_directory, 'bootloader', 'res', 'switch.bmp'),
+                os.path.join(temp_directory, 'bootloader', 'res', 'icon_switch.bmp'))
 
     return get_version(module, release, 0)
 

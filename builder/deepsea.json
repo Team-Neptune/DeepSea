@@ -107,12 +107,12 @@
         "sdsetup_module_name": null
     },
     {
-        "name": "Kosmos Toolbox",
-        "download_function_name": "download_kosmos_toolbox",
+        "name": "DeepSea Toolbox",
+        "download_function_name": "download_deepsea_toolbox",
         "git": {
             "service": 0,
-            "org_name": "AtlasNX",
-            "repo_name": "Kosmos-Toolbox",
+            "org_name": "Team-Neptune",
+            "repo_name": "DeepSea-Toolbox",
             "asset_patterns": [
                 ".*\\.nro"
             ],

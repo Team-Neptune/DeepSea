@@ -367,17 +367,17 @@ def download_kosmos_cleaner(module, temp_directory, deepsea_version, deepsea_bui
     return get_version(module, release, 0)
 
 
-def download_kosmos_toolbox(module, temp_directory, deepsea_version, deepsea_build):
+def download_deepsea_toolbox(module, temp_directory, deepsea_version, deepsea_build):
     release = get_latest_release(module)
     app_path = download_asset(module, release, 0)
     if app_path is None:
         return None
 
-    common.mkdir(temp_directory.joinpath('switch/KosmosToolbox'))
+    common.mkdir(temp_directory.joinpath('switch/DeepSeaToolbox'))
     common.move(app_path, temp_directory.joinpath(
-        'switch/KosmosToolbox/KosmosToolbox.nro'))
-    common.copy_module_file('kosmos-toolbox', 'config.json',
-                            temp_directory.joinpath('switch/KosmosToolbox/config.json'))
+        'switch/DeepSeaToolbox/DeepSeaToolbox.nro'))
+    common.copy_module_file('deepsea-toolbox', 'config.json',
+                            temp_directory.joinpath('switch/DeepSeaToolbox/config.json'))
 
     return get_version(module, release, 0)
 
@@ -571,9 +571,9 @@ def download_tesla_menu(module, temp_directory, deepsea_version, deepsea_build):
 def build(temp_directory, deepsea_version, command, auto_build):
     results = []
 
-    modules_filename = 'kosmos.json'
+    modules_filename = 'deepsea.json'
     if command == common.Command.KosmosMinimal:
-        modules_filename = 'kosmos-minimal.json'
+        modules_filename = 'deepsea-minimal.json'
     elif command == common.Command.SDSetup:
         modules_filename = 'sdsetup.json'
 

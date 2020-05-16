@@ -34,7 +34,7 @@ Send the Hekate payload to your Switch in RCM mode and launch the CFW
 * [emuiibo](https://github.com/XorTroll/emuiibo)
 * [Goldleaf](https://github.com/XorTroll/Goldleaf)
 * [Kosmos Cleaner](https://github.com/AtlasNX/Kosmos-Cleaner)
-* [Kosmos Toolbox](https://github.com/AtlasNX/Kosmos-Toolbox)
+* [DeepSea Toolbox](https://github.com/Team-Neptune/DeepSea-Toolbox)
 * [Kosmos Updater](https://github.com/AtlasNX/Kosmos-Updater)
 * [ldn_mitm](https://github.com/spacemeowx2/ldn_mitm)
 * [Lockpick](https://github.com/shchmue/Lockpick)

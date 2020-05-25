@@ -107,12 +107,27 @@
         "sdsetup_module_name": null
     },
     {
-        "name": "DeepSea Toolbox",
+        "name": "Hekate Toolbox",
         "download_function_name": "download_deepsea_toolbox",
         "git": {
             "service": 0,
+            "org_name": "WerWolv",
+            "repo_name": "Hekate-Toolbox",
+            "asset_patterns": [
+                ".*\\.nro"
+            ],
+            "group": null,
+            "version_pattern": null
+        },
+        "sdsetup_module_name": null
+    },
+    {
+        "name": "DeepSea Updater",
+        "download_function_name": "download_kosmos_updater",
+        "git": {
+            "service": 0,
             "org_name": "Team-Neptune",
-            "repo_name": "DeepSea-Toolbox",
+            "repo_name": "DeepSea-Updater",
             "asset_patterns": [
                 ".*\\.nro"
             ],

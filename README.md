@@ -33,7 +33,7 @@ Send the Hekate payload to your Switch in RCM mode and launch the CFW
 * [EdiZon](https://github.com/WerWolv/EdiZon)
 * [emuiibo](https://github.com/XorTroll/emuiibo)
 * [Goldleaf](https://github.com/XorTroll/Goldleaf)
-* [DeepSea Toolbox](https://github.com/Team-Neptune/DeepSea-Toolbox)
+* [Hekate Toolbox](https://github.com/WerWolv/Hekate-Toolbox)
 * [ldn_mitm](https://github.com/spacemeowx2/ldn_mitm)
 * [Lockpick](https://github.com/shchmue/Lockpick)
 * [Lockpick_RCM](https://github.com/shchmue/Lockpick_RCM)
@@ -48,6 +48,7 @@ Send the Hekate payload to your Switch in RCM mode and launch the CFW
 
 
 ## Credits
+* Thanks to all the previous members of Team AtlasNX for laying the groundwork for DeepSea.
 * Thanks to Daniel 💻#7205 aka Daniel C for creating the discord with me
 * Slluxx#8184 For helping us with a boat load of stuff and choosing the name of the CFW package for us
 * FennecTECH#4926 For spamming the discord chat full of images

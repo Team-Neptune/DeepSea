@@ -376,7 +376,7 @@ def download_deepsea_toolbox(module, temp_directory, deepsea_version, deepsea_bu
     common.mkdir(temp_directory.joinpath('switch/DeepSea-Toolbox'))
 
     common.move(app_path, temp_directory.joinpath(
-        'switch/deepsea-Toolbox/DeepSea-Toolbox.nro'))
+        'switch/DeepSea-Toolbox/DeepSea-Toolbox.nro'))
 
     common.copy_module_file('hekate-toolbox', 'config.json',
                             temp_directory.joinpath('switch/DeepSea-Toolbox/config.json'))

@@ -122,6 +122,21 @@
         "sdsetup_module_name": null
     },
     {
+        "name": "DeepSea Updater",
+        "download_function_name": "download_kosmos_updater",
+        "git": {
+            "service": 0,
+            "org_name": "Team-Neptune",
+            "repo_name": "DeepSea-Updater",
+            "asset_patterns": [
+                ".*\\.nro"
+            ],
+            "group": null,
+            "version_pattern": null
+        },
+        "sdsetup_module_name": null
+    },
+    {
         "name": "ldn_mitm",
         "download_function_name": "download_ldn_mitm",
         "git": {

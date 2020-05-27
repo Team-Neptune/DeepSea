@@ -373,11 +373,13 @@ def download_deepsea_toolbox(module, temp_directory, deepsea_version, deepsea_bu
     if app_path is None:
         return None
 
-    common.mkdir(temp_directory.joinpath('switch/DeepSeaToolbox'))
+    common.mkdir(temp_directory.joinpath('switch/DeepSea-Toolbox'))
+
     common.move(app_path, temp_directory.joinpath(
-        'switch/DeepSeaToolbox/DeepSeaToolbox.nro'))
-    common.copy_module_file('deepsea-toolbox', 'config.json',
-                            temp_directory.joinpath('switch/DeepSeaToolbox/config.json'))
+        'switch/deepsea-Toolbox/DeepSea-Toolbox.nro'))
+
+    common.copy_module_file('hekate-toolbox', 'config.json',
+                            temp_directory.joinpath('switch/DeepSea-Toolbox/config.json'))
 
     return get_version(module, release, 0)
 
@@ -388,13 +390,13 @@ def download_kosmos_updater(module, temp_directory, deepsea_version, deepsea_bui
     if app_path is None:
         return None
 
-    common.mkdir(temp_directory.joinpath('switch/KosmosUpdater'))
+    common.mkdir(temp_directory.joinpath('switch/DeepSea-Updater'))
     common.move(app_path, temp_directory.joinpath(
-        'switch/KosmosUpdater/KosmosUpdater.nro'))
-    common.copy_module_file('kosmos-updater', 'internal.db',
-                            temp_directory.joinpath('switch/KosmosUpdater/internal.db'))
+        'switch/DeepSea-Updater/DeepSeaUpdater.nro'))
+    common.copy_module_file('deepsea-updater', 'internal.db',
+                            temp_directory.joinpath('switch/DeepSea-Updater/internal.db'))
     common.sed('DEEPSEA_VERSION', deepsea_version,
-               temp_directory.joinpath('switch/KosmosUpdater/internal.db'))
+               temp_directory.joinpath('switch/DeepSea-Updater/internal.db'))
 
     return get_version(module, release, 0)
 

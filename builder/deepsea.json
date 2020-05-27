@@ -107,12 +107,12 @@
         "sdsetup_module_name": null
     },
     {
-        "name": "Hekate Toolbox",
+        "name": "DeepSea Toolbox",
         "download_function_name": "download_deepsea_toolbox",
         "git": {
             "service": 0,
-            "org_name": "WerWolv",
-            "repo_name": "Hekate-Toolbox",
+            "org_name": "Team-Neptune",
+            "repo_name": "DeepSea-Toolbox",
             "asset_patterns": [
                 ".*\\.nro"
             ],

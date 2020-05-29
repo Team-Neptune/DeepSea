@@ -137,6 +137,21 @@
         "sdsetup_module_name": null
     },
     {
+        "name": "DeepSea Cleaner",
+        "download_function_name": "download_deepsea_cleaner",
+        "git": {
+            "service": 0,
+            "org_name": "Team-Neptune",
+            "repo_name": "DeepSea-Cleaner",
+            "asset_patterns": [
+                ".*\\.zip"
+            ],
+            "group": null,
+            "version_pattern": null
+        },
+        "sdsetup_module_name": null
+    },
+    {
         "name": "ldn_mitm",
         "download_function_name": "download_ldn_mitm",
         "git": {

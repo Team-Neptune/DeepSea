@@ -355,7 +355,7 @@ def download_goldleaf(module, temp_directory, deepsea_version, deepsea_build):
     return get_version(module, release, 0)
 
 
-def download_kosmos_cleaner(module, temp_directory, deepsea_version, deepsea_build):
+def download_deepsea_cleaner(module, temp_directory, deepsea_version, deepsea_build):
     release = get_latest_release(module)
     bundle_path = download_asset(module, release, 0)
     if bundle_path is None:

@@ -392,7 +392,7 @@ def download_kosmos_updater(module, temp_directory, deepsea_version, deepsea_bui
 
     common.mkdir(temp_directory.joinpath('switch/DeepSea-Updater'))
     common.move(app_path, temp_directory.joinpath(
-        'switch/DeepSea-Updater/DeepSeaUpdater.nro'))
+        'switch/DeepSea-Updater/DeepSea-Updater.nro'))
     common.copy_module_file('deepsea-updater', 'internal.db',
                             temp_directory.joinpath('switch/DeepSea-Updater/internal.db'))
     common.sed('DEEPSEA_VERSION', deepsea_version,

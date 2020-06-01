@@ -55,7 +55,7 @@ Send the Hekate payload to your Switch in RCM mode and launch the CFW
 
 #### Patched (Minimal & Normal included)
 * [HarukoNX/PKG2-Patches](https://github.com/HarukoNX/PKG2-Patches)
-* [HarukoNX/ES-Patches](https://github.com/HarukoNX/PKG2-Patches)
+* [HarukoNX/ES-Patches](https://github.com/HarukoNX/ES-Patches)
 
 ## Credits
 * Thanks to all the previous members of Team AtlasNX for laying the groundwork for DeepSea.

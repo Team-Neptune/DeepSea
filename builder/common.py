@@ -29,6 +29,8 @@ class Command(enum.Enum):
     Kosmos = 0
     SDSetup = 1
     KosmosMinimal = 2
+    KosmosPatches = 3
+    KosmosMinimalPatches = 4
 
 class GitService(enum.Enum):
     GitHub = 0

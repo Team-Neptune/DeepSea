@@ -569,6 +569,44 @@ def download_tesla_menu(module, temp_directory, deepsea_version, deepsea_build):
 
     return get_version(module, release, 0)
 
+def download_pkg2_patches(module, temp_directory, deepsea_version, deepsea_build):
+    release = get_latest_release(module)
+    fusee_patches_path = download_asset(module, release, 0)
+    if fusee_patches_path is None:
+        return None
+
+    with zipfile.ZipFile(fusee_patches_path, 'r') as zip_ref:
+        zip_ref.extractall(temp_directory)
+
+    common.delete(fusee_patches_path)
+
+    hekate_patches_path = download_asset(module, release, 1)
+    if hekate_patches_path is None:
+        return None
+
+    with zipfile.ZipFile(hekate_patches_path, 'r') as zip_ref:
+        zip_ref.extractall(temp_directory)
+
+    common.delete(hekate_patches_path)
+    common.delete(temp_directory.joinpath('bootloader/hekate_ipl.ini'))
+    common.copy_module_file('hekate', 'hekate_ipl_patches.ini',
+                            temp_directory.joinpath('bootloader/hekate_ipl.ini'))
+    common.sed('DEEPSEA_VERSION', deepsea_version,
+               temp_directory.joinpath('bootloader/hekate_ipl.ini'))
+    return get_version(module, release, 0)
+
+def download_es_patches(module, temp_directory, deepsea_version, deepsea_build):
+    release = get_latest_release(module)
+    es_patches_path = download_asset(module, release, 0)
+    if es_patches_path is None:
+        return None
+
+    with zipfile.ZipFile(es_patches_path, 'r') as zip_ref:
+        zip_ref.extractall(temp_directory)
+
+    common.delete(es_patches_path)
+
+    return get_version(module, release, 0)
 
 def build(temp_directory, deepsea_version, command, auto_build):
     results = []
@@ -578,7 +616,11 @@ def build(temp_directory, deepsea_version, command, auto_build):
         modules_filename = 'deepsea-minimal.json'
     elif command == common.Command.SDSetup:
         modules_filename = 'sdsetup.json'
-
+    elif command == common.Command.KosmosPatches:
+        modules_filename = "deepsea-patches.json"
+    elif command == common.Command.KosmosMinimalPatches:
+        modules_filename = "deepsea-minimal-patches.json"
+        
     # Open up modules.json
     with open(modules_filename) as json_file:
         # Parse JSON

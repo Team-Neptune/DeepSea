@@ -62,6 +62,18 @@ def parse_args():
     parser_kosmos.add_argument('output', help='Zip file to create.')
     parser_kosmos.set_defaults(command=common.Command.KosmosMinimal)
 
+    # Kosmos with patches subcommands
+    parser_kosmos_patches = subparsers.add_parser(
+        'deepsea-patches', help='Create a release build of DeepSea with patches.')
+    parser_kosmos_patches.add_argument('output', help='Zip file to create.')
+    parser_kosmos_patches.set_defaults(command=common.Command.KosmosPatches)
+
+    # Kosmos minimal with patches subcommands
+    parser_kosmos_minimal_patches = subparsers.add_parser(
+        'deepsea-mini-patches', help='Create a release build of DeepSea Minimal with patches.')
+    parser_kosmos_minimal_patches.add_argument('output', help='Zip file to create.')
+    parser_kosmos_minimal_patches.set_defaults(command=common.Command.KosmosMinimalPatches)
+
     # Parse arguments
     args = parser.parse_args()
 
@@ -85,6 +97,10 @@ def init_version_messages(args, kosmos_version):
         return ['SDSetup Modules built with:']
     elif args.command == common.Command.KosmosMinimal:
         return [f'DeepSea Minimal {kosmos_version} built with:']
+    elif args.command == common.Command.KosmosPatches:
+        return [f'DeepSea with Patches {kosmos_version} built with:']
+    elif args.command == common.Command.KosmosMinimalPatches:
+        return [f'DeepSea Minimal with Patches {kosmos_version} built with:']
     return []
 
 

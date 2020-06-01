@@ -569,6 +569,45 @@ def download_tesla_menu(module, temp_directory, deepsea_version, deepsea_build):
 
     return get_version(module, release, 0)
 
+
+def download_awoo(module, temp_directory, deepsea_version, deepsea_build):
+    release = get_latest_release(module)
+    app_path = download_asset(module, release, 0)
+    if app_path is None:
+        return None
+
+    with zipfile.ZipFile(app_path, 'r') as zip_ref:
+        zip_ref.extractall(temp_directory)
+
+    return get_version(module, release, 0)
+
+
+def download_jksv(module, temp_directory, deepsea_version, deepsea_build):
+    release = get_latest_release(module)
+    app_path = download_asset(module, release, 0)
+    if app_path is None:
+        return None
+
+    common.mkdir(temp_directory.joinpath('switch/JKSV'))
+    common.move(app_path, temp_directory.joinpath(
+        'switch/JKSV/JKSV.nro'))
+
+    return get_version(module, release, 0)
+
+
+def download_nxmtp(module, temp_directory, deepsea_version, deepsea_build):
+    release = get_latest_release(module)
+    app_path = download_asset(module, release, 0)
+    if app_path is None:
+        return None
+
+    common.mkdir(temp_directory.joinpath('switch/nxmtp'))
+    common.move(app_path, temp_directory.joinpath(
+        'switch/nxmtp/nxmtp.nro'))
+
+    return get_version(module, release, 0)
+
+
 def download_pkg2_patches(module, temp_directory, deepsea_version, deepsea_build):
     release = get_latest_release(module)
     fusee_patches_path = download_asset(module, release, 0)
@@ -595,6 +634,7 @@ def download_pkg2_patches(module, temp_directory, deepsea_version, deepsea_build
                temp_directory.joinpath('bootloader/hekate_ipl.ini'))
     return get_version(module, release, 0)
 
+
 def download_es_patches(module, temp_directory, deepsea_version, deepsea_build):
     release = get_latest_release(module)
     es_patches_path = download_asset(module, release, 0)
@@ -608,6 +648,7 @@ def download_es_patches(module, temp_directory, deepsea_version, deepsea_build):
 
     return get_version(module, release, 0)
 
+
 def build(temp_directory, deepsea_version, command, auto_build):
     results = []
 
@@ -620,7 +661,7 @@ def build(temp_directory, deepsea_version, command, auto_build):
         modules_filename = "deepsea-patches.json"
     elif command == common.Command.KosmosMinimalPatches:
         modules_filename = "deepsea-minimal-patches.json"
-        
+
     # Open up modules.json
     with open(modules_filename) as json_file:
         # Parse JSON

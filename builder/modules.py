@@ -591,7 +591,8 @@ def download_pkg2_patches(module, temp_directory, deepsea_version, deepsea_build
     common.delete(temp_directory.joinpath('bootloader/hekate_ipl.ini'))
     common.copy_module_file('hekate', 'hekate_ipl_patches.ini',
                             temp_directory.joinpath('bootloader/hekate_ipl.ini'))
-    
+    common.sed('DEEPSEA_VERSION', deepsea_version,
+               temp_directory.joinpath('bootloader/hekate_ipl.ini'))
     return get_version(module, release, 0)
 
 def download_es_patches(module, temp_directory, deepsea_version, deepsea_build):

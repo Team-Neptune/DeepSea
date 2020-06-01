@@ -17,13 +17,6 @@ jobs:
       run: |
         echo ::set-env name=TAG_NAME::$(cat ./VERSION)
         
-    - name: Bump release version
-      id: bump_version
-      uses: christian-draeger/increment-semantic-version@1.0.1
-      with:
-        current-version: '${{ env.TAG_NAME }}'
-        version-fragment: 'feature'
-
     - name: Set up Python 3.8
       uses: actions/setup-python@v1
       with:
@@ -39,12 +32,17 @@ jobs:
         gitToken: ${{ secrets.SLX_GIT_TOKEN }}
         gitUser: ${{ secrets.SLX_GIT_USER }}
       run: | 
-        echo -e "version = 'v${{ steps.bump_version.outputs.next-version }}'\ngithub_username = '$gitUser'\ngithub_password = '$gitPass'\ngitlab_private_access_token = '$gitToken'"> ./builder/config.py
+        echo -e "version = 'v${{ env.TAG_NAME }}'\ngithub_username = '$gitUser'\ngithub_password = '$gitPass'\ngitlab_private_access_token = '$gitToken'"> ./builder/config.py
     
     - name: Compile DeepSea Zip
       run: |
         cd ./builder
         python ./builder.py deepsea output="./deepsea.zip"
+
+    - name: Compile DeepSea-patches Zip
+      run: |
+        cd ./builder
+        python ./builder.py deepsea-patches output="./deepsea-patched.zip"
     
     - name: Compile DeepSea-minimal Zip
       run: |
@@ -57,11 +55,12 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-          tag_name: v${{ steps.bump_version.outputs.next-version }}
-          release_name: Release ${{ steps.bump_version.outputs.next-version }}
+          tag_name: ${{ env.TAG_NAME }}
+          release_name: Release ${{ env.TAG_NAME }}
           draft: true
           prerelease: false
-    
+
+
     - name: Upload Release Asset - DeepSea
       id: upload-release-asset 
       uses: actions/upload-release-asset@v1
@@ -70,36 +69,30 @@ jobs:
       with:
           upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
           asset_path: ./builder/deepsea.zip
-          asset_name: deepsea_v${{ steps.bump_version.outputs.next-version }}.zip
+          asset_name: deepsea_v${{ env.TAG_NAME }}.zip
           asset_content_type: application/zip
-    
-    - name: Upload Release Asset - DeepSea-Minimal
+
+
+    - name: Upload Release Asset - DeepSea-Patches
       id: upload-release-asset2
       uses: actions/upload-release-asset@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
           upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
-          asset_path: ./builder/deepsea-minimal.zip
-          asset_name: deepsea-minimal_v${{ steps.bump_version.outputs.next-version }}.zip
+          asset_path: ./builder/deepsea-patched.zip
+          asset_name: deepsea-patched_v${{ env.TAG_NAME }}.zip
           asset_content_type: application/zip
-      
-    - name: Clean workspace
-      run: |
-        rm -rf ./build/*.zip
-        rm -rf ./build/config.py
-        
-    - name: Bump VERSION
-      run: |
-       echo ${{ steps.bump_version.outputs.next-version }} > ./VERSION
 
-    - name: Commit files
-      run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git commit -m "[Auto] bump push after build" -a
-    - name: Push changes
-      uses: ad-m/github-push-action@master
+
+
+    - name: Upload Release Asset - DeepSea-Minimal
+      id: upload-release-asset3
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        
+          upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
+          asset_path: ./builder/deepsea-minimal.zip
+          asset_name: deepsea-minimal_v${{ env.TAG_NAME }}.zip
+          asset_content_type: application/zip

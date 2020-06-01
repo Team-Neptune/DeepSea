@@ -107,6 +107,21 @@
         "sdsetup_module_name": null
     },
     {
+        "name": "Awoo Installer",
+        "download_function_name": "download_awoo",
+        "git": {
+            "service": 0,
+            "org_name": "Huntereb",
+            "repo_name": "Awoo-Installer",
+            "asset_patterns": [
+                ".*\\.zip"
+            ],
+            "group": null,
+            "version_pattern": null
+        },
+        "sdsetup_module_name": null
+    },
+    {
         "name": "DeepSea Toolbox",
         "download_function_name": "download_deepsea_toolbox",
         "git": {
@@ -137,6 +152,51 @@
         "sdsetup_module_name": null
     },
     {
+        "name": "DeepSea Cleaner",
+        "download_function_name": "download_deepsea_cleaner",
+        "git": {
+            "service": 0,
+            "org_name": "Team-Neptune",
+            "repo_name": "DeepSea-Cleaner",
+            "asset_patterns": [
+                ".*\\.zip"
+            ],
+            "group": null,
+            "version_pattern": null
+        },
+        "sdsetup_module_name": null
+    },
+    {
+        "name": "JKSV",
+        "download_function_name": "download_jksv",
+        "git": {
+            "service": 0,
+            "org_name": "J-D-K",
+            "repo_name": "JKSV",
+            "asset_patterns": [
+                ".*\\.nro"
+            ],
+            "group": null,
+            "version_pattern": null
+        },
+        "sdsetup_module_name": null
+    },
+    {
+        "name": "NXMTP",
+        "download_function_name": "download_nxmtp",
+        "git": {
+            "service": 0,
+            "org_name": "liuervehc",
+            "repo_name": "nxmtp",
+            "asset_patterns": [
+                ".*\\.nro"
+            ],
+            "group": null,
+            "version_pattern": null
+        },
+        "sdsetup_module_name": null
+    },
+    {
         "name": "ldn_mitm",
         "download_function_name": "download_ldn_mitm",
         "git": {
@@ -152,21 +212,6 @@
         "sdsetup_module_name": null
     },
     {
-        "name": "Lockpick",
-        "download_function_name": "download_lockpick",
-        "git": {
-            "service": 0,
-            "org_name": "shchmue",
-            "repo_name": "Lockpick",
-            "asset_patterns": [
-                ".*\\.nro"
-            ],
-            "group": null,
-            "version_pattern": null
-        },
-        "sdsetup_module_name": null
-    },
-    {
         "name": "Lockpick_RCM",
         "download_function_name": "download_lockpick_rcm",
         "git": {
@@ -175,21 +220,6 @@
             "repo_name": "Lockpick_RCM",
             "asset_patterns": [
                 ".*\\.bin"
-            ],
-            "group": null,
-            "version_pattern": null
-        },
-        "sdsetup_module_name": null
-    },
-    {
-        "name": "nxdumptool",
-        "download_function_name": "download_nxdumptool",
-        "git": {
-            "service": 0,
-            "org_name": "DarkMatterCore",
-            "repo_name": "nxdumptool",
-            "asset_patterns": [
-                ".*nxdumptool.*\\.nro"
             ],
             "group": null,
             "version_pattern": null

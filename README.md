@@ -22,7 +22,7 @@ DeepSea - The new All-in-One CFW package for the Nintendo Switch.
 ## How to use
 Follow this guide to hack your switch: https://switch.homebrew.guide
 
-Download the latest release and put it on your SD Card\
+Download the latest release and put it on your SD Card<br />
 Send the Hekate payload to your Switch in RCM mode and launch the CFW
 
 

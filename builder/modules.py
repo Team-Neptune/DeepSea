@@ -662,13 +662,28 @@ def build(temp_directory, deepsea_version, command, auto_build):
     elif command == common.Command.KosmosMinimalPatches:
         modules_filename = "deepsea-minimal-patches.json"
 
+    # Open up modules-definitions.json first and load all modules
+    mods_map = {}
+    with open("Modules/modules-definitions.json") as mod_json_file:
+        mods_data = json.load(mod_json_file)
+
+        for module_def in mods_data:
+            name = module_def['name']
+            if name in mods_map:
+                raise Exception('Multiple definitions of module with name '+name)
+            mods_map[name] = module_def
+
     # Open up modules.json
     with open(modules_filename) as json_file:
         # Parse JSON
         data = json.load(json_file)
 
         # Loop through modules
-        for module in data:
+        for mod_id in data:
+            if mod_id not in mods_map:
+                raise Exception('Module with name '+mod_id+' does not exist')
+            module = mods_map[mod_id]
+            
             # Running a SDSetup Build
             if command == common.Command.SDSetup:
                 # Only show prompts when it's not an auto build.

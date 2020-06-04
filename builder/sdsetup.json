@@ -1,71 +1,70 @@
 {
     "package_name": "SDSetup",
     "is_sdsetup": true,
-    "modules": 
-[
-{
-"module_name": "Atmosphère",
-"parameters": null
-},
-{
-"module_name": "Hekate",
-"parameters": null
-},
-{
-"module_name": "Hekate Icons",
-"parameters": null
-},
-{
-"module_name": "Emuiibo",
-"parameters": null
-},
-{
-"module_name": "Kosmos Cleaner",
-"parameters": null
-},
-{
-"module_name": "Kosmos Toolbox",
-"parameters": null
-},
-{
-"module_name": "Kosmos Updater",
-"parameters": null
-},
-{
-"module_name": "ldn_mitm",
-"parameters": null
-},
-{
-"module_name": "Lockpick_RCM",
-"parameters": null
-},
-{
-"module_name": "nx-ovlloader",
-"parameters": null
-},
-{
-"module_name": "ovlSysModules",
-"parameters": null
-},
-{
-"module_name": "Status Monitor Overlay",
-"parameters": null
-},
-{
-"module_name": "sys-clk",
-"parameters": null
-},
-{
-"module_name": "sys-con",
-"parameters": null
-},
-{
-"module_name": "sys-ftpd-light",
-"parameters": null
-},
-{
-"module_name": "Tesla-Menu",
-"parameters": null
-}
-]
+    "modules": [
+        {
+            "module_name": "Atmosphère",
+            "parameters": null
+        },
+        {
+            "module_name": "Hekate",
+            "parameters": null
+        },
+        {
+            "module_name": "Hekate Icons",
+            "parameters": null
+        },
+        {
+            "module_name": "Emuiibo",
+            "parameters": null
+        },
+        {
+            "module_name": "Kosmos Cleaner",
+            "parameters": null
+        },
+        {
+            "module_name": "Kosmos Toolbox",
+            "parameters": null
+        },
+        {
+            "module_name": "Kosmos Updater",
+            "parameters": null
+        },
+        {
+            "module_name": "ldn_mitm",
+            "parameters": null
+        },
+        {
+            "module_name": "Lockpick_RCM",
+            "parameters": null
+        },
+        {
+            "module_name": "nx-ovlloader",
+            "parameters": null
+        },
+        {
+            "module_name": "ovlSysModules",
+            "parameters": null
+        },
+        {
+            "module_name": "Status Monitor Overlay",
+            "parameters": null
+        },
+        {
+            "module_name": "sys-clk",
+            "parameters": null
+        },
+        {
+            "module_name": "sys-con",
+            "parameters": null
+        },
+        {
+            "module_name": "sys-ftpd-light",
+            "parameters": null
+        },
+        {
+            "module_name": "Tesla-Menu",
+            "parameters": null
+        }
+    ]
 }

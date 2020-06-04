@@ -1,4 +1,14 @@
-[
-    "Atmosphère",
-    "Hekate"
-]
+{
+    "package_name": "DeepSea Minimal",
+    "is_sdsetup": false,
+    "modules": [
+        {
+            "module_name": "Atmosphère",
+            "parameters": null
+        },
+        {
+            "module_name": "Hekate",
+            "parameters": null
+        }
+    ]
+}

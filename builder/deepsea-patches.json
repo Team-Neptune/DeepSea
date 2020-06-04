@@ -1,26 +1,102 @@
-[
-    "Atmosphère",
-    "Hekate",
-    "Hekate Icons",
-    "Homebrew App Store",
-    "EdiZon",
-    "Emuiibo",
-    "Goldleaf",
-    "Awoo Installer",
-    "DeepSea Toolbox",
-    "DeepSea Updater",
-    "DeepSea Cleaner",
-    "JKSV",
-    "NXMTP",
-    "ldn_mitm",
-    "Lockpick_RCM",
-    "nx-ovlloader",
-    "ovlSysModules",
-    "Status Monitor Overlay",
-    "sys-clk",
-    "sys-con",
-    "sys-ftpd-light",
-    "Tesla-Menu",
-    "PKG2-Patches",
-    "ES-Patches"
-]
+{
+    "package_name": "DeepSea with Patches",
+    "is_sdsetup": false,
+    "modules": [
+        {
+            "module_name": "Atmosphère",
+            "parameters": null
+        },
+        {
+            "module_name": "Hekate",
+            "parameters": null
+        },
+        {
+            "module_name": "Hekate Icons",
+            "parameters": null
+        },
+        {
+            "module_name": "Homebrew App Store",
+            "parameters": null
+        },
+        {
+            "module_name": "EdiZon",
+            "parameters": null
+        },
+        {
+            "module_name": "Emuiibo",
+            "parameters": null
+        },
+        {
+            "module_name": "Goldleaf",
+            "parameters": null
+        },
+        {
+            "module_name": "Awoo Installer",
+            "parameters": null
+        },
+        {
+            "module_name": "DeepSea Toolbox",
+            "parameters": null
+        },
+        {
+            "module_name": "DeepSea Updater",
+            "parameters": null
+        },
+        {
+            "module_name": "DeepSea Cleaner",
+            "parameters": null
+        },
+        {
+            "module_name": "JKSV",
+            "parameters": null
+        },
+        {
+            "module_name": "NXMTP",
+            "parameters": null
+        },
+        {
+            "module_name": "ldn_mitm",
+            "parameters": null
+        },
+        {
+            "module_name": "Lockpick_RCM",
+            "parameters": null
+        },
+        {
+            "module_name": "nx-ovlloader",
+            "parameters": null
+        },
+        {
+            "module_name": "ovlSysModules",
+            "parameters": null
+        },
+        {
+            "module_name": "Status Monitor Overlay",
+            "parameters": null
+        },
+        {
+            "module_name": "sys-clk",
+            "parameters": null
+        },
+        {
+            "module_name": "sys-con",
+            "parameters": null
+        },
+        {
+            "module_name": "sys-ftpd-light",
+            "parameters": null
+        },
+        {
+            "module_name": "Tesla-Menu",
+            "parameters": null
+        },
+        {
+            "module_name": "PKG2-Patches",
+            "parameters": null
+        },
+        {
+            "module_name": "ES-Patches",
+            "parameters": null
+        }
+    ]
+}

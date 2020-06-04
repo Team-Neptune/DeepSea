@@ -183,7 +183,7 @@ def get_version(module, release, index):
         return groups[0]
 
 
-def download_atmosphere(module, temp_directory, deepsea_version, deepsea_build):
+def download_atmosphere(module, temp_directory, deepsea_version, parameters, deepsea_build):
     release = get_latest_release(module)
     bundle_path = download_asset(module, release, 0)
     if bundle_path is None:
@@ -214,7 +214,7 @@ def download_atmosphere(module, temp_directory, deepsea_version, deepsea_build):
     return get_version(module, release, 0)
 
 
-def download_hekate(module, temp_directory, deepsea_version, deepsea_build):
+def download_hekate(module, temp_directory, deepsea_version, parameters, deepsea_build):
     release = get_latest_release(module)
     bundle_path = download_asset(module, release, 0)
     if bundle_path is None:
@@ -254,7 +254,7 @@ def download_hekate(module, temp_directory, deepsea_version, deepsea_build):
     return get_version(module, release, 0)
 
 
-def download_hekate_icons(module, temp_directory, deepsea_version, deepsea_build):
+def download_hekate_icons(module, temp_directory, deepsea_version, parameters, deepsea_build):
     release = get_latest_release(module)
     bundle_path = download_asset(module, release, 0)
     if bundle_path is None:
@@ -279,7 +279,7 @@ def download_hekate_icons(module, temp_directory, deepsea_version, deepsea_build
     return get_version(module, release, 0)
 
 
-def download_appstore(module, temp_directory, deepsea_version, deepsea_build):
+def download_appstore(module, temp_directory, deepsea_version, parameters, deepsea_build):
     release = get_latest_release(module)
     bundle_path = download_asset(module, release, 0)
     if bundle_path is None:
@@ -296,7 +296,7 @@ def download_appstore(module, temp_directory, deepsea_version, deepsea_build):
     return get_version(module, release, 0)
 
 
-def download_edizon(module, temp_directory, deepsea_version, deepsea_build):
+def download_edizon(module, temp_directory, deepsea_version, parameters, deepsea_build):
     release = get_latest_release(module)
     app_path = download_asset(module, release, 0)
     if app_path is None:
@@ -316,7 +316,7 @@ def download_edizon(module, temp_directory, deepsea_version, deepsea_build):
     return get_version(module, release, 0)
 
 
-def download_emuiibo(module, temp_directory, deepsea_version, deepsea_build):
+def download_emuiibo(module, temp_directory, deepsea_version, parameters, deepsea_build):
     release = get_latest_release(module)
     bundle_path = download_asset(module, release, 0)
     if bundle_path is None:
@@ -342,7 +342,7 @@ def download_emuiibo(module, temp_directory, deepsea_version, deepsea_build):
     return get_version(module, release, 0)
 
 
-def download_goldleaf(module, temp_directory, deepsea_version, deepsea_build):
+def download_goldleaf(module, temp_directory, deepsea_version, parameters, deepsea_build):
     release = get_latest_release(module)
     app_path = download_asset(module, release, 0)
     if app_path is None:
@@ -355,7 +355,7 @@ def download_goldleaf(module, temp_directory, deepsea_version, deepsea_build):
     return get_version(module, release, 0)
 
 
-def download_deepsea_cleaner(module, temp_directory, deepsea_version, deepsea_build):
+def download_deepsea_cleaner(module, temp_directory, deepsea_version, parameters, deepsea_build):
     release = get_latest_release(module)
     bundle_path = download_asset(module, release, 0)
     if bundle_path is None:
@@ -367,7 +367,7 @@ def download_deepsea_cleaner(module, temp_directory, deepsea_version, deepsea_bu
     return get_version(module, release, 0)
 
 
-def download_deepsea_toolbox(module, temp_directory, deepsea_version, deepsea_build):
+def download_deepsea_toolbox(module, temp_directory, deepsea_version, parameters, deepsea_build):
     release = get_latest_release(module)
     app_path = download_asset(module, release, 0)
     if app_path is None:
@@ -384,7 +384,7 @@ def download_deepsea_toolbox(module, temp_directory, deepsea_version, deepsea_bu
     return get_version(module, release, 0)
 
 
-def download_kosmos_updater(module, temp_directory, deepsea_version, deepsea_build):
+def download_kosmos_updater(module, temp_directory, deepsea_version, parameters, deepsea_build):
     release = get_latest_release(module)
     app_path = download_asset(module, release, 0)
     if app_path is None:
@@ -401,7 +401,7 @@ def download_kosmos_updater(module, temp_directory, deepsea_version, deepsea_bui
     return get_version(module, release, 0)
 
 
-def download_ldn_mitm(module, temp_directory, deepsea_version, deepsea_build):
+def download_ldn_mitm(module, temp_directory, deepsea_version, parameters, deepsea_build):
     release = get_latest_release(module)
     bundle_path = download_asset(module, release, 0)
     if bundle_path is None:
@@ -420,7 +420,7 @@ def download_ldn_mitm(module, temp_directory, deepsea_version, deepsea_build):
     return get_version(module, release, 0)
 
 
-def download_lockpick(module, temp_directory, deepsea_version, deepsea_build):
+def download_lockpick(module, temp_directory, deepsea_version, parameters, deepsea_build):
     release = get_latest_release(module)
     app_path = download_asset(module, release, 0)
     if app_path is None:
@@ -433,7 +433,7 @@ def download_lockpick(module, temp_directory, deepsea_version, deepsea_build):
     return get_version(module, release, 0)
 
 
-def download_lockpick_rcm(module, temp_directory, deepsea_version, deepsea_build):
+def download_lockpick_rcm(module, temp_directory, deepsea_version, parameters, deepsea_build):
     release = get_latest_release(module)
     payload_path = download_asset(module, release, 0)
     if payload_path is None:
@@ -449,7 +449,7 @@ def download_lockpick_rcm(module, temp_directory, deepsea_version, deepsea_build
     return get_version(module, release, 0)
 
 
-def download_nxdumptool(module, temp_directory, deepsea_version, deepsea_build):
+def download_nxdumptool(module, temp_directory, deepsea_version, parameters, deepsea_build):
     release = get_latest_release(module)
     app_path = download_asset(module, release, 0)
     if app_path is None:
@@ -462,7 +462,7 @@ def download_nxdumptool(module, temp_directory, deepsea_version, deepsea_build):
     return get_version(module, release, 0)
 
 
-def download_nx_ovlloader(module, temp_directory, deepsea_version, deepsea_build):
+def download_nx_ovlloader(module, temp_directory, deepsea_version, parameters, deepsea_build):
     release = get_latest_release(module)
     bundle_path = download_asset(module, release, 0)
     if bundle_path is None:
@@ -476,7 +476,7 @@ def download_nx_ovlloader(module, temp_directory, deepsea_version, deepsea_build
     return get_version(module, release, 0)
 
 
-def download_ovl_sysmodules(module, temp_directory, deepsea_version, deepsea_build):
+def download_ovl_sysmodules(module, temp_directory, deepsea_version, parameters, deepsea_build):
     release = get_latest_release(module)
     app_path = download_asset(module, release, 0)
     if app_path is None:
@@ -489,7 +489,7 @@ def download_ovl_sysmodules(module, temp_directory, deepsea_version, deepsea_bui
     return get_version(module, release, 0)
 
 
-def download_status_monitor_overlay(module, temp_directory, deepsea_version, deepsea_build):
+def download_status_monitor_overlay(module, temp_directory, deepsea_version, parameters, deepsea_build):
     release = get_latest_release(module)
     app_path = download_asset(module, release, 0)
     if app_path is None:
@@ -502,7 +502,7 @@ def download_status_monitor_overlay(module, temp_directory, deepsea_version, dee
     return get_version(module, release, 0)
 
 
-def download_sys_clk(module, temp_directory, deepsea_version, deepsea_build):
+def download_sys_clk(module, temp_directory, deepsea_version, parameters, deepsea_build):
     release = get_latest_release(module)
     bundle_path = download_asset(module, release, 0)
     if bundle_path is None:
@@ -522,7 +522,7 @@ def download_sys_clk(module, temp_directory, deepsea_version, deepsea_build):
     return get_version(module, release, 0)
 
 
-def download_sys_con(module, temp_directory, deepsea_version, deepsea_build):
+def download_sys_con(module, temp_directory, deepsea_version, parameters, deepsea_build):
     release = get_latest_release(module)
     bundle_path = download_asset(module, release, 0)
     if bundle_path is None:
@@ -539,7 +539,7 @@ def download_sys_con(module, temp_directory, deepsea_version, deepsea_build):
     return get_version(module, release, 0)
 
 
-def download_sys_ftpd_light(module, temp_directory, deepsea_version, deepsea_build):
+def download_sys_ftpd_light(module, temp_directory, deepsea_version, parameters, deepsea_build):
     release = get_latest_release(module)
     bundle_path = download_asset(module, release, 0)
     if bundle_path is None:
@@ -556,7 +556,7 @@ def download_sys_ftpd_light(module, temp_directory, deepsea_version, deepsea_bui
     return get_version(module, release, 0)
 
 
-def download_tesla_menu(module, temp_directory, deepsea_version, deepsea_build):
+def download_tesla_menu(module, temp_directory, deepsea_version, parameters, deepsea_build):
     release = get_latest_release(module)
     bundle_path = download_asset(module, release, 0)
     if bundle_path is None:
@@ -570,7 +570,7 @@ def download_tesla_menu(module, temp_directory, deepsea_version, deepsea_build):
     return get_version(module, release, 0)
 
 
-def download_awoo(module, temp_directory, deepsea_version, deepsea_build):
+def download_awoo(module, temp_directory, deepsea_version, parameters, deepsea_build):
     release = get_latest_release(module)
     app_path = download_asset(module, release, 0)
     if app_path is None:
@@ -582,7 +582,7 @@ def download_awoo(module, temp_directory, deepsea_version, deepsea_build):
     return get_version(module, release, 0)
 
 
-def download_jksv(module, temp_directory, deepsea_version, deepsea_build):
+def download_jksv(module, temp_directory, deepsea_version, parameters, deepsea_build):
     release = get_latest_release(module)
     app_path = download_asset(module, release, 0)
     if app_path is None:
@@ -595,7 +595,7 @@ def download_jksv(module, temp_directory, deepsea_version, deepsea_build):
     return get_version(module, release, 0)
 
 
-def download_nxmtp(module, temp_directory, deepsea_version, deepsea_build):
+def download_nxmtp(module, temp_directory, deepsea_version, parameters, deepsea_build):
     release = get_latest_release(module)
     app_path = download_asset(module, release, 0)
     if app_path is None:
@@ -608,7 +608,7 @@ def download_nxmtp(module, temp_directory, deepsea_version, deepsea_build):
     return get_version(module, release, 0)
 
 
-def download_pkg2_patches(module, temp_directory, deepsea_version, deepsea_build):
+def download_pkg2_patches(module, temp_directory, deepsea_version, parameters, deepsea_build):
     release = get_latest_release(module)
     fusee_patches_path = download_asset(module, release, 0)
     if fusee_patches_path is None:
@@ -635,7 +635,7 @@ def download_pkg2_patches(module, temp_directory, deepsea_version, deepsea_build
     return get_version(module, release, 0)
 
 
-def download_es_patches(module, temp_directory, deepsea_version, deepsea_build):
+def download_es_patches(module, temp_directory, deepsea_version, parameters, deepsea_build):
     release = get_latest_release(module)
     es_patches_path = download_asset(module, release, 0)
     if es_patches_path is None:
@@ -649,18 +649,8 @@ def download_es_patches(module, temp_directory, deepsea_version, deepsea_build):
     return get_version(module, release, 0)
 
 
-def build(temp_directory, deepsea_version, command, auto_build):
+def build(temp_directory, deepsea_version, package_content, auto_build):
     results = []
-
-    modules_filename = 'deepsea.json'
-    if command == common.Command.KosmosMinimal:
-        modules_filename = 'deepsea-minimal.json'
-    elif command == common.Command.SDSetup:
-        modules_filename = 'sdsetup.json'
-    elif command == common.Command.KosmosPatches:
-        modules_filename = "deepsea-patches.json"
-    elif command == common.Command.KosmosMinimalPatches:
-        modules_filename = "deepsea-minimal-patches.json"
 
     # Open up modules-definitions.json first and load all modules
     mods_map = {}
@@ -674,50 +664,51 @@ def build(temp_directory, deepsea_version, command, auto_build):
             mods_map[name] = module_def
 
     # Open up modules.json
-    with open(modules_filename) as json_file:
-        # Parse JSON
-        data = json.load(json_file)
+    data = package_content['modules']
+ 
+    # Loop through modules
+    for mod_entry in data:
+        mod_id = mod_entry['module_name']
+        if mod_id not in mods_map:
+            raise Exception('Module with name '+mod_id+' does not exist')
 
-        # Loop through modules
-        for mod_id in data:
-            if mod_id not in mods_map:
-                raise Exception('Module with name '+mod_id+' does not exist')
-            module = mods_map[mod_id]
-            
-            # Running a SDSetup Build
-            if command == common.Command.SDSetup:
-                # Only show prompts when it's not an auto build.
-                if not auto_build:
-                    print(f'Downloading {module["name"]}...')
+        module = mods_map[mod_id]
+        parameters = mod_entry.get('parameters')
 
-                # Make sure module directory is created.
-                module_directory = temp_directory.joinpath(
-                    module['sdsetup_module_name'])
-                common.mkdir(module_directory)
-
-                # Download the module.
-                download = globals()[module['download_function_name']]
-                version = download(module, module_directory,
-                                   deepsea_version, False)
-                if version is None:
-                    return None
-
-                # Auto builds have a different prompt at the end for parsing.
-                if auto_build:
-                    results.append(
-                        f'{module["sdsetup_module_name"]}:{version}')
-                else:
-                    results.append(f'  {module["name"]} - {version}')
-
-            # Running a Kosmos Build
-            else:
-                # Download the module.
+        # Running a SDSetup Build
+        if package_content['is_sdsetup']:
+            # Only show prompts when it's not an auto build.
+            if not auto_build:
                 print(f'Downloading {module["name"]}...')
-                download = globals()[module['download_function_name']]
-                version = download(module, temp_directory,
-                                   deepsea_version, True)
-                if version is None:
-                    return None
+
+            # Make sure module directory is created.
+            module_directory = temp_directory.joinpath(
+                module['sdsetup_module_name'])
+            common.mkdir(module_directory)
+
+            # Download the module.
+            download = globals()[module['download_function_name']]
+            version = download(module, module_directory,
+                                deepsea_version, parameters, False)
+            if version is None:
+                return None
+
+            # Auto builds have a different prompt at the end for parsing.
+            if auto_build:
+                results.append(
+                    f'{module["sdsetup_module_name"]}:{version}')
+            else:
                 results.append(f'  {module["name"]} - {version}')
+
+        # Running a Kosmos Build
+        else:
+            # Download the module.
+            print(f'Downloading {module["name"]}...')
+            download = globals()[module['download_function_name']]
+            version = download(module, temp_directory,
+                                deepsea_version, parameters, True)
+            if version is None:
+                return None
+            results.append(f'  {module["name"]} - {version}')
 
     return results

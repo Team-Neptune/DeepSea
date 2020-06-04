@@ -1,6 +1,22 @@
-[
-    "Atmosphère",
-    "Hekate",
-    "PKG2-Patches",
-    "ES-Patches"
-]
+{
+    "package_name": "DeepSea Minimal with Patches",
+    "is_sdsetup": false,
+    "modules": [
+        {
+            "module_name": "Atmosphère",
+            "parameters": null
+        },
+        {
+            "module_name": "Hekate",
+            "parameters": null
+        },
+        {
+            "module_name": "PKG2-Patches",
+            "parameters": null
+        },
+        {
+            "module_name": "ES-Patches",
+            "parameters": null
+        }
+    ]
+}

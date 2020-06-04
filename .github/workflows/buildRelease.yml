@@ -37,17 +37,17 @@ jobs:
     - name: Compile DeepSea Zip
       run: |
         cd ./builder
-        python ./builder.py deepsea output="./deepsea.zip"
+        python ./builder.py deepsea.json output="./deepsea.zip"
 
     - name: Compile DeepSea-patches Zip
       run: |
         cd ./builder
-        python ./builder.py deepsea-patches output="./deepsea-patched.zip"
+        python ./builder.py deepsea-patches.json output="./deepsea-patched.zip"
     
     - name: Compile DeepSea-minimal Zip
       run: |
         cd ./builder
-        python ./builder.py deepsea-mini output="./deepsea-minimal.zip"
+        python ./builder.py deepsea-minimal.json output="./deepsea-minimal.zip"
     
     - name: Create Release
       id: create_release

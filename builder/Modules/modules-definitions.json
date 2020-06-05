@@ -332,6 +332,21 @@
         "sdsetup_module_name": "sys_clk"
     },
     {
+        "name": "sys-clk-ovl",
+        "download_function_name": "download_sys_clk_ovl",
+        "git": {
+            "service": 0,
+            "org_name": "Sun-Research-University",
+            "repo_name": "sys-clk-Overlay",
+            "asset_patterns": [
+                ".*sys-clk-Overlay.*\\.ovl"
+            ],
+            "group": null,
+            "version_pattern": null
+        },
+        "sdsetup_module_name": "sys_clk_ovl"
+    },
+    {
         "name": "sys-con",
         "download_function_name": "download_sys_con",
         "git": {

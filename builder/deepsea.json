@@ -79,6 +79,10 @@
             "parameters": null
         },
         {
+            "module_name": "sys-clk-ovl",
+            "parameters": null
+        },
+        {
             "module_name": "sys-con",
             "parameters": null
         },

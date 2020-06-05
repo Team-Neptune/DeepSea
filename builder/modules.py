@@ -522,6 +522,18 @@ def download_sys_clk(module, temp_directory, deepsea_version, parameters, deepse
     return get_version(module, release, 0)
 
 
+def download_sys_clk_ovl(module, temp_directory, deepsea_version, parameters, deepsea_build):
+    release = get_latest_release(module)
+    app_path = download_asset(module, release, 0)
+    if app_path is None:
+        return None
+
+    common.move(app_path, temp_directory.joinpath(
+        'switch/.overlays/sys-clk-Overlay.ovl'))
+
+    return get_version(module, release, 0)
+
+
 def download_sys_con(module, temp_directory, deepsea_version, parameters, deepsea_build):
     release = get_latest_release(module)
     bundle_path = download_asset(module, release, 0)
@@ -660,12 +672,13 @@ def build(temp_directory, deepsea_version, package_content, auto_build):
         for module_def in mods_data:
             name = module_def['name']
             if name in mods_map:
-                raise Exception('Multiple definitions of module with name '+name)
+                raise Exception(
+                    'Multiple definitions of module with name '+name)
             mods_map[name] = module_def
 
     # Open up modules.json
     data = package_content['modules']
- 
+
     # Loop through modules
     for mod_entry in data:
         mod_id = mod_entry['module_name']
@@ -689,7 +702,7 @@ def build(temp_directory, deepsea_version, package_content, auto_build):
             # Download the module.
             download = globals()[module['download_function_name']]
             version = download(module, module_directory,
-                                deepsea_version, parameters, False)
+                               deepsea_version, parameters, False)
             if version is None:
                 return None
 
@@ -706,7 +719,7 @@ def build(temp_directory, deepsea_version, package_content, auto_build):
             print(f'Downloading {module["name"]}...')
             download = globals()[module['download_function_name']]
             version = download(module, temp_directory,
-                                deepsea_version, parameters, True)
+                               deepsea_version, parameters, True)
             if version is None:
                 return None
             results.append(f'  {module["name"]} - {version}')

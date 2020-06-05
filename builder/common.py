@@ -25,13 +25,6 @@ import re
 import shutil
 import uuid
 
-class Command(enum.Enum):
-    Kosmos = 0
-    SDSetup = 1
-    KosmosMinimal = 2
-    KosmosPatches = 3
-    KosmosMinimalPatches = 4
-
 class GitService(enum.Enum):
     GitHub = 0
     GitLab = 1

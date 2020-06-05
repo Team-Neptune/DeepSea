@@ -1,64 +1,22 @@
-[
-    {
-        "name": "Atmosphère",
-        "download_function_name": "download_atmosphere",
-        "git": {
-            "service": 0,
-            "org_name": "Atmosphere-NX",
-            "repo_name": "Atmosphere",
-            "asset_patterns": [
-                ".*atmosphere.*\\.zip",
-                ".*fusee.*\\.bin"
-            ],
-            "group": null,
-            "version_pattern": null
+{
+    "package_name": "DeepSea Minimal with Patches",
+    "is_sdsetup": false,
+    "modules": [
+        {
+            "module_name": "Atmosphère",
+            "parameters": null
         },
-        "sdsetup_module_name": null
-    },
-    {
-        "name": "Hekate",
-        "download_function_name": "download_hekate",
-        "git": {
-            "service": 0,
-            "org_name": "CTCaer",
-            "repo_name": "hekate",
-            "asset_patterns": [
-                ".*hekate.*\\.zip"
-            ],
-            "group": null,
-            "version_pattern": null
+        {
+            "module_name": "Hekate",
+            "parameters": null
         },
-        "sdsetup_module_name": null
-    },
-    {
-        "name": "PKG2-Patches",
-        "download_function_name": "download_pkg2_patches",
-        "git": {
-            "service": 0,
-            "org_name": "HarukoNX",
-            "repo_name": "PKG2-Patches",
-            "asset_patterns": [
-                ".*fusee.*\\.zip",
-                ".*hekate.*\\.zip"
-            ],
-            "group": null,
-            "version_pattern": null
+        {
+            "module_name": "PKG2-Patches",
+            "parameters": null
         },
-        "sdsetup_module_name": null
-    },
-    {
-        "name": "ES-Patches",
-        "download_function_name": "download_es_patches",
-        "git": {
-            "service": 0,
-            "org_name": "HarukoNX",
-            "repo_name": "ES-Patches",
-            "asset_patterns": [
-                ".*\\.zip"
-            ],
-            "group": null,
-            "version_pattern": null
-        },
-        "sdsetup_module_name": null
-    }
-]
+        {
+            "module_name": "ES-Patches",
+            "parameters": null
+        }
+    ]
+}

@@ -26,7 +26,7 @@ import modules
 from pathlib import Path
 import shutil
 import sys
-
+import json
 
 def parse_args():
     parser = argparse.ArgumentParser()
@@ -36,50 +36,19 @@ def parse_args():
         type=str,
         help='Overrides the DeepSea Version from the config file.',
         metavar='DeepSeaVersion')
-    subparsers = parser.add_subparsers()
-
-    # Kosmos subcommands
-    parser_kosmos = subparsers.add_parser(
-        'deepsea', help='Create a release build of DeepSea.')
-    parser_kosmos.add_argument('output', help='Zip file to create.')
-    parser_kosmos.set_defaults(command=common.Command.Kosmos)
-
-    # SDSetup subcommands
-    parser_sdsetup = subparsers.add_parser(
-        'sdsetup', help='Create a DeepSea modules for SDSetup.')
-    parser_sdsetup.add_argument(
-        'output', help='Directory to output modules to.')
-    parser_sdsetup.add_argument(
-        '-a', '--auto',
-        action='store_true',
-        default=False,
-        help='Perform an auto build.')
-    parser_sdsetup.set_defaults(command=common.Command.SDSetup)
-
-    # Kosmos Minimal subcommands
-    parser_kosmos = subparsers.add_parser(
-        'deepsea-mini', help='Create a release build of DeepSea Minimal.')
-    parser_kosmos.add_argument('output', help='Zip file to create.')
-    parser_kosmos.set_defaults(command=common.Command.KosmosMinimal)
-
-    # Kosmos with patches subcommands
-    parser_kosmos_patches = subparsers.add_parser(
-        'deepsea-patches', help='Create a release build of DeepSea with patches.')
-    parser_kosmos_patches.add_argument('output', help='Zip file to create.')
-    parser_kosmos_patches.set_defaults(command=common.Command.KosmosPatches)
-
-    # Kosmos minimal with patches subcommands
-    parser_kosmos_minimal_patches = subparsers.add_parser(
-        'deepsea-mini-patches', help='Create a release build of DeepSea Minimal with patches.')
-    parser_kosmos_minimal_patches.add_argument('output', help='Zip file to create.')
-    parser_kosmos_minimal_patches.set_defaults(command=common.Command.KosmosMinimalPatches)
-
+    parser.add_argument(
+        "package_file",
+        default=None,
+        type=str,
+        help="Create a release build using the provided json file.")
+    parser.add_argument(
+        "output",
+        default=None,
+        type=str,
+        help='Zip file to create.')
+    
     # Parse arguments
     args = parser.parse_args()
-
-    if not hasattr(args, 'command'):
-        parser.print_help()
-        sys.exit()
 
     return args
 
@@ -90,18 +59,9 @@ def get_deepsea_version(args):
     return config.version
 
 
-def init_version_messages(args, kosmos_version):
-    if args.command == common.Command.Kosmos:
-        return [f'DeepSea {kosmos_version} built with:']
-    elif args.command == common.Command.SDSetup and not args.auto:
-        return ['SDSetup Modules built with:']
-    elif args.command == common.Command.KosmosMinimal:
-        return [f'DeepSea Minimal {kosmos_version} built with:']
-    elif args.command == common.Command.KosmosPatches:
-        return [f'DeepSea with Patches {kosmos_version} built with:']
-    elif args.command == common.Command.KosmosMinimalPatches:
-        return [f'DeepSea Minimal with Patches {kosmos_version} built with:']
-    return []
+def init_version_messages(package_content, kosmos_version):
+    pkg_name = package_content['package_name']
+    return [f'{pkg_name} {kosmos_version} built with:']
 
 
 if __name__ == '__main__':
@@ -115,17 +75,20 @@ if __name__ == '__main__':
     if hasattr(args, 'auto'):
         auto_build = args.auto
 
-    version_messages = init_version_messages(args, deepsea_version)
+    with open(args.package_file,'r') as pkgfile:
+        package_content = json.load(pkgfile)
+
+    version_messages = init_version_messages(package_content, deepsea_version)
 
     build_messages = modules.build(
-        temp_directory, deepsea_version, args.command, auto_build)
+        temp_directory, deepsea_version, package_content, auto_build)
 
     common.delete(args.output)
 
     if build_messages is not None:
         version_messages += build_messages
 
-        if args.command == common.Command.SDSetup:
+        if package_content['is_sdsetup']:
             common.move(temp_directory, args.output)
         else:
             shutil.make_archive(

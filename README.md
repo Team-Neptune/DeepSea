@@ -66,6 +66,6 @@ Send the Hekate payload to your Switch in RCM mode and launch the CFW
 
 
 ## Notes
-Though we offer a "patched" package that enables the installation and usage of your backup and unlawfully obtained games, we do not condone piracy. The reason we offer this package is because we rather include it ourself instead of letting users go to other sources and use more shady versions of our or other CFW's/packages. Its up to the end user to decide if he wants to be on the good or the bad side, just like in life. The patches used are from [HarukoNX/PKG2-Patches](https://github.com/HarukoNX/PKG2-Patches) and [HarukoNX/ES-Patches](https://github.com/HarukoNX/PKG2-Patches).
+Though we offer a "patched" package that enables the installation and usage of your backup and unlawfully obtained games, we do not condone piracy. The reason we offer this package is because we rather include it ourself instead of letting users go to other sources and use more shady versions of our or other CFW's/packages. Its up to the end user to decide if he wants to be on the good or the bad side, just like in life. The patches used are from [HarukoNX/PKG2-Patches](https://github.com/HarukoNX/PKG2-Patches) and [HarukoNX/ES-Patches](https://github.com/HarukoNX/ES-Patches).
 
 We will not offer any kind of support related to the patches or piracy.

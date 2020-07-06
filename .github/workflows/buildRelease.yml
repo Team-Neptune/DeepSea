@@ -43,7 +43,7 @@ jobs:
       run: |
         set -x
         assets=()
-        for asset in ./builder*.zip; do
+        for asset in ./builder/*.zip; do
           assets+=("-a" "$asset")
         done
         tag_name=$(cat ./release_body.txt)

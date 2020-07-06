@@ -35,7 +35,7 @@ packageOutputs = ""
 
 for package in packages:
     command = 'cd ./builder && python ./builder.py -v v' + \
-        version+' '+package+'.json output="./' + package+'.zip"'
+        version+' '+package+'.json output="./' + package+'_v'+version+'.zip"'
     process = subprocess.run(command, shell=True, check=True,
                              stdout=subprocess.PIPE, universal_newlines=True)
     print(process.stdout)
@@ -51,5 +51,5 @@ for line in lines:
         release["bodyText"] = release["bodyText"] + "* " + \
             getModuleMarkdown(mName, mVersion) + "\n"
 
-with open("release_body.txt", 'w') as filetowrite:
+with open("release.txt", 'w') as filetowrite:
     filetowrite.write(release["bodyText"])

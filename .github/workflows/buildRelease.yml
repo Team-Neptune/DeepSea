@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - master
-      - development
 
 jobs:
   build:
@@ -46,7 +45,7 @@ jobs:
         for asset in ./builder/*.zip; do
           assets+=("-a" "$asset")
         done
-        tag_name=$(cat ./release_body.txt)
+        tag_name=$(cat ./release.txt)
         hub release create "${assets[@]}" -d -m "$tag_name" "v${{ steps.set-version.outputs.version }}"
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -8,7 +8,6 @@ on:
 
 jobs:
   build:
-    
     runs-on: ubuntu-latest
     
     steps:
@@ -34,13 +33,14 @@ jobs:
         gitToken: ${{ secrets.SLX_GIT_TOKEN }}
         gitUser: ${{ secrets.SLX_GIT_USER }}
       run: | 
-        echo -e "version = 'github_username = '$gitUser'\ngithub_password = '$gitPass'\ngitlab_private_access_token = '$gitToken'"> ./builder/config.py
+        echo -e "github_username = '$gitUser'\ngithub_password = '$gitPass'\ngitlab_private_access_token = '$gitToken'"> ./builder/config.py
     
     - name: Compile DeepSea Zip
       run: |
         python ./autobuild.py
 
-    - run: |
+    - name: Create Release
+      run: |
         set -x
         assets=()
         for asset in ./builder*.zip; do

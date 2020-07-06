@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+      - development
 
 jobs:
   build:
@@ -13,9 +14,10 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       
-    - name: Increment version
+    - id: set-version
       run: |
-        echo ::set-env name=TAG_NAME::$(cat ./VERSION)
+        version=$(cat ./VERSION | python -c 'import sys, json; f=open("./VERSION");print(json.loads(f.read())["buildVersion"])')
+        echo "::set-output name=version::$version"
         
     - name: Set up Python 3.8
       uses: actions/setup-python@v1
@@ -32,67 +34,19 @@ jobs:
         gitToken: ${{ secrets.SLX_GIT_TOKEN }}
         gitUser: ${{ secrets.SLX_GIT_USER }}
       run: | 
-        echo -e "version = 'v${{ env.TAG_NAME }}'\ngithub_username = '$gitUser'\ngithub_password = '$gitPass'\ngitlab_private_access_token = '$gitToken'"> ./builder/config.py
+        echo -e "version = 'github_username = '$gitUser'\ngithub_password = '$gitPass'\ngitlab_private_access_token = '$gitToken'"> ./builder/config.py
     
     - name: Compile DeepSea Zip
       run: |
-        cd ./builder
-        python ./builder.py deepsea.json output="./deepsea.zip"
+        python ./autobuild.py
 
-    - name: Compile DeepSea-patches Zip
-      run: |
-        cd ./builder
-        python ./builder.py deepsea-patches.json output="./deepsea-patched.zip"
-    
-    - name: Compile DeepSea-minimal Zip
-      run: |
-        cd ./builder
-        python ./builder.py deepsea-minimal.json output="./deepsea-minimal.zip"
-    
-    - name: Create Release
-      id: create_release
-      uses: actions/create-release@v1
+    - run: |
+        set -x
+        assets=()
+        for asset in ./builder*.zip; do
+          assets+=("-a" "$asset")
+        done
+        tag_name=$(cat ./release_body.txt)
+        hub release create "${assets[@]}" -d -m "$tag_name" "v${{ steps.set-version.outputs.version }}"
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-          tag_name: ${{ env.TAG_NAME }}
-          release_name: Release ${{ env.TAG_NAME }}
-          draft: true
-          prerelease: false
-
-
-    - name: Upload Release Asset - DeepSea
-      id: upload-release-asset 
-      uses: actions/upload-release-asset@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
-          asset_path: ./builder/deepsea.zip
-          asset_name: deepsea_v${{ env.TAG_NAME }}.zip
-          asset_content_type: application/zip
-
-
-    - name: Upload Release Asset - DeepSea-Patches
-      id: upload-release-asset2
-      uses: actions/upload-release-asset@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
-          asset_path: ./builder/deepsea-patched.zip
-          asset_name: deepsea-patched_v${{ env.TAG_NAME }}.zip
-          asset_content_type: application/zip
-
-
-
-    - name: Upload Release Asset - DeepSea-Minimal
-      id: upload-release-asset3
-      uses: actions/upload-release-asset@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
-          asset_path: ./builder/deepsea-minimal.zip
-          asset_name: deepsea-minimal_v${{ env.TAG_NAME }}.zip
-          asset_content_type: application/zip

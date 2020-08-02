@@ -14,7 +14,7 @@
 #
 # You should have received a copy of the GNU General Public License
 # along with this program; if not, write to the Free Software
-# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 
+# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
 # 02110-1301, USA.
 #
 
@@ -24,14 +24,18 @@ from pathlib import Path
 import re
 import shutil
 import uuid
+from distutils.dir_util import copy_tree
+
 
 class GitService(enum.Enum):
     GitHub = 0
     GitLab = 1
     SourceForge = 2
 
+
 def generate_temp_path():
     return Path.cwd().joinpath('tmp', str(uuid.uuid4()))
+
 
 def delete(source):
     sourcePath = Path(source)
@@ -42,7 +46,7 @@ def delete(source):
     if sourcePath.is_file():
         sourcePath.unlink()
         return
-    
+
     for fileSourcePath in sourcePath.iterdir():
         delete(fileSourcePath)
 
@@ -53,16 +57,20 @@ def delete(source):
         sourcePath.rmdir()
         return
 
+
 def copy_module_file(module_name, file_name, destination):
     sourcePath = Path.cwd().joinpath('Modules', module_name, file_name)
     return shutil.copyfile(sourcePath, destination)
 
+
 def copy_module_folder(module_name, folder_name, destination):
-    sourcePath = Path.cwd().joinpath('Modules', module_name, file_name)
-    return shutil.copytree(sourcePath, destination)
+    sourcePath = Path.cwd().joinpath('Modules', module_name, folder_name)
+    return copy_tree(sourcePath, str(destination))
+
 
 def find_file(pattern):
     return glob.glob(str(pattern), recursive=False)
+
 
 def sed(pattern, replace, file_path):
     lines = []
@@ -72,8 +80,10 @@ def sed(pattern, replace, file_path):
         for line in lines:
             text_file.write(re.sub(pattern, replace, line))
 
+
 def mkdir(dest):
     Path(dest).mkdir(parents=True, exist_ok=True)
+
 
 def move(source, dest):
     sourcePath = Path(source)
@@ -88,11 +98,11 @@ def move(source, dest):
 
     if not destPath.exists():
         destPath.mkdir(parents=True, exist_ok=True)
-    
+
     for fileSourcePath in sourcePath.iterdir():
         fileDestPath = destPath.joinpath(fileSourcePath.name)
 
         if fileSourcePath.is_dir():
             fileDestPath.mkdir(parents=True, exist_ok=True)
-        
+
         move(fileSourcePath, fileDestPath)

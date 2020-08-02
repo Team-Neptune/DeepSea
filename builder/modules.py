@@ -194,7 +194,7 @@ def download_atmosphere(module, temp_directory, deepsea_version, parameters, dee
 
     common.delete(bundle_path)
     common.delete(temp_directory.joinpath('switch/reboot_to_payload.nro'))
-    common.delete(temp_directory.joinpath('switch'))
+    # common.delete(temp_directory.joinpath('switch'))
     common.delete(temp_directory.joinpath('atmosphere/reboot_payload.bin'))
 
     payload_path = download_asset(module, release, 1)
@@ -207,6 +207,12 @@ def download_atmosphere(module, temp_directory, deepsea_version, parameters, dee
 
     common.copy_module_file('atmosphere', 'system_settings.ini', temp_directory.joinpath(
         'atmosphere/config/system_settings.ini'))
+
+    common.move(temp_directory.joinpath('switch/daybreak.nro'),
+                temp_directory.joinpath('switch/daybreak.nro'))
+
+    common.copy_module_folder('deepsea', 'bootlogo', temp_directory.joinpath(
+        'atmosphere/exefs_patches/bootlogo/'))
 
     if not deepsea_build:
         common.delete(temp_directory.joinpath('hbmenu.nro'))

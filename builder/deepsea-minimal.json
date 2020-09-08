@@ -9,6 +9,10 @@
         {
             "module_name": "Hekate",
             "parameters": null
+        },
+        {
+            "module_name": "Homebrew App Store",
+            "parameters": null
         }
     ]
 }

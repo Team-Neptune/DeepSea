@@ -40,7 +40,7 @@ Send the Hekate payload to your Switch in RCM mode and launch the CFW
 | [EdiZon](https://github.com/WerWolv/EdiZon) | ✅ |  |
 | [emuiibo](https://github.com/XorTroll/emuiibo) | ✅ |  |
 | [Goldleaf](https://github.com/XorTroll/Goldleaf) | ✅ |  |
-| [Awoo Installer](https://github.com/Huntereb/Awoo-Installer) | ✅ |  |
+| [Deepsea NSXInstaller](https://github.com/Team-Neptune/NSXInstaller) | ✅ |  |
 | [DeepSea Toolbox](https://github.com/Team-Neptune/DeepSea-Toolbox) | ✅ |  |
 | [DeepSea Updater](https://github.com/Team-Neptune/DeepSea-Updater) | ✅ |  |
 | [DeepSea Cleaner](https://github.com/Team-Neptune/DeepSea-Cleaner) | ✅ |  |

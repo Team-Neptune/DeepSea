@@ -152,6 +152,21 @@
         "sdsetup_module_name": null
     },
     {
+        "name": "NSXInstaller",
+        "download_function_name": "download_nsxinstaller",
+        "git": {
+            "service": 0,
+            "org_name": "Team-Neptune",
+            "repo_name": "NSXInstaller",
+            "asset_patterns": [
+                ".*\\.zip"
+            ],
+            "group": null,
+            "version_pattern": null
+        },
+        "sdsetup_module_name": null
+    },
+    {
         "name": "Kosmos Toolbox",
         "download_function_name": "download_kosmos_toolbox",
         "git": {

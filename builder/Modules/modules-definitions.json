@@ -152,12 +152,12 @@
         "sdsetup_module_name": null
     },
     {
-        "name": "NSXInstaller",
-        "download_function_name": "download_nsxinstaller",
+        "name": "NSAInstaller",
+        "download_function_name": "download_nsainstaller",
         "git": {
             "service": 0,
             "org_name": "Team-Neptune",
-            "repo_name": "NSXInstaller",
+            "repo_name": "NSAInstaller",
             "asset_patterns": [
                 ".*\\.zip"
             ],

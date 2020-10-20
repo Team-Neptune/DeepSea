@@ -59,6 +59,6 @@ Send the Hekate payload to your Switch in RCM mode and launch the CFW
 
 ## Credits
 * Thanks to all the previous members of Team AtlasNX for laying the groundwork for DeepSea.
-* Thanks to [Daniel💻#7205](https://discord.com/users/461560462991949863) and [hax4dayz#6455](https://discord.com/users/302734867425132545) for helping to create the [Discord server](https://discord.gg/VkaRjYN).
+* Thanks to [TechGeekGamer#7205](https://discord.com/users/461560462991949863) and [hax4dayz#6455](https://discord.com/users/302734867425132545) for helping to create the [Discord server](https://discord.gg/VkaRjYN).
 * [Slluxx#8184](https://discord.com/users/207210256378363907) For helping us with a boat load of stuff and choosing the name of the CFW package for us.
 * And a huge thanks to all the awesome homebrew developers!

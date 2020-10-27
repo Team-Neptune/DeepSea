@@ -7,7 +7,7 @@
             "org_name": "Atmosphere-NX",
             "repo_name": "Atmosphere",
             "asset_patterns": [
-                ".*atmosphere.*\\.zip",
+                ".*atmosphere-EXPERIMENTAL.*\\.zip",
                 ".*fusee.*\\.bin"
             ],
             "group": null,

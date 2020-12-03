@@ -21,6 +21,8 @@ DeepSea - The new All-in-One CFW package for the Nintendo Switch.
 * The latest and greatest homebrew from the scene
 * **and much more!**
 
+**Please check out our [wiki](https://github.com/Team-Neptune/DeepSea/wiki) to learn about the best features**
+
 
 ## How to use
 Follow this guide to hack your switch: https://switch.homebrew.guide

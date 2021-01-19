@@ -17,10 +17,10 @@ jobs:
         version=$(cat ./VERSION | python -c 'import sys, json; f=open("./VERSION");print(json.loads(f.read())["buildVersion"])')
         echo "::set-output name=version::$version"
         
-    - name: Set up Python 3.8
+    - name: Set up Python 3.9
       uses: actions/setup-python@v1
       with:
-        python-version: 3.8.6
+        python-version: 3.9.1
 
     - name: Install dependencies
       run: |

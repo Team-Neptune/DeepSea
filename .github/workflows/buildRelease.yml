@@ -24,28 +24,21 @@ jobs:
 
     - name: Install dependencies
       run: |
-        if [ -f ./builder/requirements.txt ]; then pip3 install -r ./builder/requirements.txt; fi
+        if [ -f ./requirements.txt ]; then pip3 install -r ./requirements.txt; fi
         
-    - name: Create config script
+    - name: Create DeepSea Packages
       env:
-        gitPass: ${{ secrets.SLX_GIT_PASS }}
-        gitToken: ${{ secrets.SLX_GIT_TOKEN }}
-        gitUser: ${{ secrets.SLX_GIT_USER }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: | 
-        echo -e "github_username = '$gitUser'\ngithub_password = '$gitPass'\ngitlab_private_access_token = '$gitToken'"> ./builder/config.py
-    
-    - name: Compile DeepSea Zip
-      run: |
-        python ./autobuild.py
+        python ./autobuild.py -gt="$GITHUB_TOKEN"
 
     - name: Create Release
       run: |
         set -x
         assets=()
-        for asset in ./builder/*.zip; do
+        for asset in ./*.zip; do
           assets+=("-a" "$asset")
         done
-        tag_name=$(cat ./release.txt)
-        hub release create "${assets[@]}" -d -m "$tag_name" "v${{ steps.set-version.outputs.version }}"
+        hub release create "${assets[@]}" -d -m "Release v${{ steps.set-version.outputs.version }}" "v${{ steps.set-version.outputs.version }}"
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

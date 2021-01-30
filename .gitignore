@@ -1,6 +1,7 @@
 config.py
 .vscode
 tmp/
+switch_out/
 *.zip
 
 # Byte-compiled / optimized / DLL files

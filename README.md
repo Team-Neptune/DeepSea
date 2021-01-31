@@ -2,7 +2,7 @@
 
 DeepSea - The new All-in-One CFW package for the Nintendo Switch.
 
-<a href="http://sdshrekup.com/invite"><img alt="Discord" src="https://img.shields.io/discord/703301751171973190?label=Join%20DeepSea%20on%20Discord"></a> 
+<a href="https://discord.gg/VkaRjYN"><img alt="Discord" src="https://img.shields.io/discord/703301751171973190?label=Join%20DeepSea%20on%20Discord"></a> 
 <img alt="GitHub All Releases" src="https://img.shields.io/github/downloads/Team-Neptune/DeepSea/total?label=Total%20downloads"> 
 <img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/Team-Neptune/DeepSea/BuildRelease?label=Build">
 

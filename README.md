@@ -1,15 +1,17 @@
 <img src="assets/deepsea_wide.png" align="center" width="100%" />
-
-DeepSea - The new All-in-One CFW package for the Nintendo Switch.
+<center>
+The new All-in-One CFW package for the Nintendo Switch.
 
 <a href="https://discord.gg/VkaRjYN"><img alt="Discord" src="https://img.shields.io/discord/703301751171973190?label=Join%20DeepSea%20on%20Discord"></a> 
 <img alt="GitHub All Releases" src="https://img.shields.io/github/downloads/Team-Neptune/DeepSea/total?label=Total%20downloads"> 
 <img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/Team-Neptune/DeepSea/BuildRelease?label=Build">
 
+</center>
 
 ---
 
 ## Features
+
 - Background FTP server for filetransfers
 - Install NSP, NSZ, XCI & XCZ files from Harddrive, Google Drive, WLAN or Wired through PC, Smartphone, etc
 - Over & Underclocking

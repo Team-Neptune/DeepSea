@@ -47,7 +47,7 @@ Send the Hekate payload to your Switch in RCM mode and launch the CFW
 | [TinWoo](https://github.com/mrdude2478/TinWoo) | ✅ |  |
 | [DeepSea Toolbox](https://github.com/Team-Neptune/DeepSea-Toolbox) | ✅ |  |
 | [DeepSea Cleaner](https://github.com/Team-Neptune/DeepSea-Cleaner) | ✅ |  |
-| [DeepSea Assets](https://github.com/Team-Neptune/DeepSea-Assets) | ✅ |  |
+| [DeepSea Assets](https://github.com/Team-Neptune/DeepSea-Assets) | ✅ | ✅ |
 | [aio-switch-updater](https://github.com/HamletDuFromage/aio-switch-updater) | ✅ |  |
 | [JKSV](https://github.com/J-D-K/JKSV) | ✅ |  |
 | [nxmtp](https://github.com/liuervehc/nxmtp) | ✅ |  |

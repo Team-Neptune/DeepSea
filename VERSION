@@ -1,4 +1,4 @@
 {
-    "buildVersion": "1.9.4",
-    "buildPackages": ["deepsea", "deepsea-minimal"]
+    "buildVersion": "2.0.0",
+    "buildPackages": ["normal", "minimal"]
 }

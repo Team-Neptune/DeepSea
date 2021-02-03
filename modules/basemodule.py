@@ -7,6 +7,7 @@ import uuid, os, re
 import zipfile
 import shutil
 import argparse
+import glob
 
 parser = argparse.ArgumentParser(description="TeamNeptune's DeepSea build script.")
 requiredNamed = parser.add_argument_group('Options required to build a release candidate')
@@ -85,6 +86,16 @@ class Basemodule:
         if os.path.exists(filepath):
             os.remove(filepath)
 
+    def findAndRemove(self, filename):
+        if self.__module__ != "modules.atmosphere" or self.__module__ != "modules.ovlloader":
+            search = Path.joinpath(self.workspaceFullPath, "**", filename)
+            fileList = glob.glob(str(search), recursive=True)
+            for filePath in fileList:
+                try:
+                    os.remove(filePath)
+                except:
+                    pass
+
     def copyFolderContentToPackage(self, source_dir, target_dir=""):
         if source_dir is None:
             return None
@@ -96,4 +107,5 @@ class Basemodule:
         release = self.getLatestRelease()
         assetName = self.downloadAsset(release)
         extracted = self.unpackAsset(assetName)
+        self.findAndRemove("boot2.flag")
         self.copyFolderContentToPackage(extracted)

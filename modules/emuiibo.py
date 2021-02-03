@@ -18,6 +18,7 @@ class Emuiibo(Basemodule):
         assetName = self.downloadAsset(release)
         extracted = self.unpackAsset(assetName)
         extracted = Path.joinpath(extracted, "SdOut")
+        self.findAndRemove("boot2.flag")
         self.copyFolderContentToPackage(extracted)
 
 package = Emuiibo(config)

@@ -12,6 +12,12 @@ config = {
 class Deepseacleaner(Basemodule):
     def __init__(self, config):
         Basemodule.__init__(self, config)
+    
+    def handleModule(self):
+        release = self.getLatestRelease()
+        assetName = self.downloadAsset(release)
+        extracted = self.unpackAsset(assetName)
+        self.copyFolderContentToPackage(extracted)
 
 
 package = Deepseacleaner(config)

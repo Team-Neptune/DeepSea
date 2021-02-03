@@ -87,7 +87,11 @@ class Basemodule:
             os.remove(filepath)
 
     def findAndRemove(self, filename):
-        if self.__module__ != "modules.atmosphere" or self.__module__ != "modules.ovlloader":
+        if self.__module__ == "modules.atmosphere":
+            pass
+        elif self.__module__ == "modules.ovlloader": 
+            pass
+        else:
             search = Path.joinpath(self.workspaceFullPath, "**", filename)
             fileList = glob.glob(str(search), recursive=True)
             for filePath in fileList:
@@ -95,6 +99,7 @@ class Basemodule:
                     os.remove(filePath)
                 except:
                     pass
+
 
     def copyFolderContentToPackage(self, source_dir, target_dir=""):
         if source_dir is None:

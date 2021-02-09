@@ -19,6 +19,7 @@ def overridePayload(extracted):
                 os.mkdir(Path.joinpath(folder, "atmosphere"))
                 #os.rename(Path.joinpath(folder, i), Path.joinpath(folder, "atmosphere", "reboot_payload.bin"))
                 shutil.copy2(Path.joinpath(folder, i), Path.joinpath(folder, "atmosphere", "reboot_payload.bin"))
+                shutil.copy2(Path.joinpath(folder, i), Path.joinpath(folder, "bootloader", "update.bin"))
                 return None
 
 class Hekate(Basemodule):

@@ -13,7 +13,7 @@
 ## Features
 
 - Background FTP server for filetransfers
-- Install NSP, NSZ, XCI & XCZ files from Harddrive, Google Drive, WLAN or Wired through PC, Smartphone, etc
+- Install NSP, NSZ, XCI & XCZ files from Harddrive, Google Drive, WLAN or wired through PC, Smartphone, etc
 - Over & Underclocking
 - Update OFW & CFW through homebrew
 - Find new homebrew through the Appstore
@@ -22,7 +22,7 @@
 - Emulate Amiibos
 - Use all kinds of 3rd party controllers
 - Lan play (like Hamachi for your Switch)
-- Tesla overlay to controll al those features (press L1+DpadDown+RightStick)
+- Tesla overlay to controll all those features (press L1+DpadDown+RightStick)
 
 
 **Please check out our [wiki](https://github.com/Team-Neptune/DeepSea/wiki) to learn about the best features**

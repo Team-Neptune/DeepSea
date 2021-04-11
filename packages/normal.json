@@ -5,6 +5,6 @@
 
     "aioswitchupdater", "edizon", "emuiibo", "jksv", "nxmtp", "tinwoo",
     
-    "ldnmitm", "missioncontrol", "sysclk", "syscon","sysftplight",
+    "ldnmitm", "sysclk", "syscon","sysftplight",
     "ovlloader", "ovlsysmodules", "teslamenu", "statusmonitoroverlay"
 ]

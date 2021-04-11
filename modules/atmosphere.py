@@ -22,7 +22,7 @@ def editSystemSettings(extracted):
         outp.write(data.encode())
 
 def createContentsFolder(extracted):
-    os.makedirs(Path.joinpath(extracted, "contents"))
+    os.makedirs(Path.joinpath(extracted, "atmosphere", "contents"))
 
 def removeRebootToPayload(extracted):
     os.remove(Path.joinpath(extracted, "switch", "reboot_to_payload.nro"))

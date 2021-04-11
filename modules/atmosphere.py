@@ -21,6 +21,9 @@ def editSystemSettings(extracted):
     with open(settings_out, 'wb') as outp:
         outp.write(data.encode())
 
+def createContentsFolder(extracted):
+    os.makedirs(Path.joinpath(extracted, "contents"))
+
 def removeRebootToPayload(extracted):
     os.remove(Path.joinpath(extracted, "switch", "reboot_to_payload.nro"))
 
@@ -32,6 +35,7 @@ class Atmosphere(Basemodule):
         release = self.getLatestRelease()
         assetName = self.downloadAsset(release)
         extracted = self.unpackAsset(assetName)
+        createContentsFolder(extracted)
         editSystemSettings(extracted)
         removeRebootToPayload(extracted)
         self.copyFolderContentToPackage(extracted)

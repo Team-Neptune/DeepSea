@@ -1,4 +1,4 @@
 {
-    "buildVersion": "2.2.5",
+    "buildVersion": "2.3.0",
     "buildPackages": ["normal", "minimal"]
 }

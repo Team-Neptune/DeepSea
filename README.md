@@ -60,6 +60,7 @@ Send the Hekate payload to your Switch in RCM mode and launch the CFW
 | [MissionControl](https://github.com/ndeadly/MissionControl) | ✅ |  |
 | [sys-ftpd-light](https://github.com/cathery/sys-ftpd-light) | ✅ |  |
 | [ldn_mitm](https://github.com/spacemeowx2/ldn_mitm) | ✅ |  |
+| [NX-Shell](https://github.com/joel16/NX-Shell) | ✅ |  |  |
 
 
 ## Credits

@@ -5,6 +5,10 @@
         {
             "action": "extract",
             "source": ".*sys-con.*\\.zip"
+        },
+        {
+            "action": "delete",
+            "source": "atmosphere/contents/690000000000000D/flags/boot2.flag"
         }
     ]
 }

@@ -5,6 +5,10 @@
         {
             "action": "extract",
             "source": ".*sys-ftpd-light.*\\.zip"
+        },
+        {
+            "action": "delete",
+            "source": "atmosphere/contents/420000000000000E/flags/boot2.flag"
         }
     ]
 }

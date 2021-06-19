@@ -19,7 +19,7 @@ if __name__ == '__main__':
         exit()
 
     shutil.rmtree("tmp", ignore_errors=True)
-    gh = GH.GH(args.gt)
+    gh = GH.GH(args.githubToken)
     fs = FS.FS()
 
 

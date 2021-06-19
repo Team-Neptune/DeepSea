@@ -31,7 +31,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: | 
-        python ./autobuild.py -gt="$GITHUB_TOKEN" -v="v${{ steps.set-version.outputs.version }}"
+        python ./build.py -gt="$GITHUB_TOKEN" -v="v${{ steps.set-version.outputs.version }}"
 
     - name: Create Release
       run: |

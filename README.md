@@ -49,8 +49,8 @@ Send the Hekate payload to your Switch in RCM mode and launch the CFW
 | [Hekate](https://github.com/CTCaer/hekate) | ✅ | ✅ | ✅ |
 | [Homebrew App Store](https://gitlab.com/4TU/hb-appstore) | ✅ | ✅ | ✅ |
 | [JKSV](https://github.com/J-D-K/JKSV) | ✅ | ✅ |  |
-| [ldn_mitm](https://github.com/spacemeowx2/ldn_mitm) | ✅ | ✅ |  |
-| [MissionControl](https://github.com/ndeadly/MissionControl) | ✅ |  |
+| [ldn_mitm](https://github.com/spacemeowx2/ldn_mitm) | ✅ |  |  |
+| [MissionControl](https://github.com/ndeadly/MissionControl) | Currently Disabled |  |
 | [nx-ovlloader](https://github.com/WerWolv/nx-ovlloader) | ✅ | ✅ |  |
 | [NX-Shell](https://github.com/joel16/NX-Shell) | ✅ |  |  |
 | [nxmtp](https://github.com/liuervehc/nxmtp) | ✅ | ✅ |  |
@@ -58,7 +58,7 @@ Send the Hekate payload to your Switch in RCM mode and launch the CFW
 | [Status Monitor Overlay](https://github.com/masagrator/Status-Monitor-Overlay) | ✅ |  |
 | [Switch-aio-updater](https://github.com/HamletDuFromage/aio-switch-updater) | ✅ | ✅ |  |
 | [sys-clk](https://github.com/retronx-team/sys-clk) | ✅ |  |
-| [sys-con](https://github.com/cathery/sys-con) | ✅ | ✅ |  |
+| [sys-con](https://github.com/cathery/sys-con) | ✅ |  |  |
 | [sys-ftpd-light](https://github.com/cathery/sys-ftpd-light) | ✅ | ✅ |  |
 | [TegraExplorer](https://github.com/joel16/NX-Shell) | ✅ |  |  |
 | [Tesla-Menu](https://github.com/WerWolv/Tesla-Menu) | ✅ | ✅ |  |

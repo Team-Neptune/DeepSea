@@ -1,0 +1,15 @@
+{
+    "repo":"Team-Neptune/DeepSea-Toolbox",
+    "assetRegex":[".*\\.nro"],
+    "customSteps":[
+        {
+            "action": "createDir",
+            "source": "switch/DeepSea-Toolbox"
+        },
+        {
+            "action": "move",
+            "source": "DeepSeaToolbox.nro",
+            "destination": "switch/DeepSea-Toolbox/DeepSeaToolbox.nro"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "repo":"cathery/sys-ftpd-light",
+    "assetRegex":[".*sys-ftpd-light.*\\.zip"],
+    "customSteps":[
+        {
+            "action": "extract",
+            "source": ".*sys-ftpd-light.*\\.zip"
+        }
+    ]
+}

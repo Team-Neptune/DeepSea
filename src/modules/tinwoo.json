@@ -1,0 +1,10 @@
+{
+    "repo":"mrdude2478/TinWoo",
+    "assetRegex":[".*TinWoo-Installer.*\\.zip"],
+    "customSteps":[
+        {
+            "action": "extract",
+            "source": ".*TinWoo-Installer.*\\.zip"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "repo":"Team-Neptune/CommonProblemResolver",
+    "assetRegex":[".*\\.bin"],
+    "customSteps":[
+        {
+            "action": "createDir",
+            "source": "bootloader/payloads"
+        },
+        {
+            "action": "move",
+            "source": "CommonProblemResolver.bin",
+            "destination": "bootloader/payloads/CommonProblemResolver.bin"
+        }
+    ]
+}

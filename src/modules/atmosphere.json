@@ -1,0 +1,29 @@
+{
+    "repo":"Atmosphere-NX/Atmosphere",
+    "assetRegex":[".*atmosphere.*\\.zip"],
+    "customSteps":[
+        {
+            "action": "extract",
+            "source": ".*atmosphere.*\\.zip"
+        },
+        {
+            "action": "delete",
+            "source": "switch/reboot_to_payload.nro"
+        },
+        {
+            "action": "createDir",
+            "source": "atmosphere/contents"
+        },
+        {
+            "action": "copy",
+            "source": "atmosphere/config_templates/system_settings.ini",
+            "destination": "atmosphere/config/system_settings.ini"
+        },
+        {
+            "action": "replaceText",
+            "source": "atmosphere/config/system_settings.ini",
+            "target": "; dmnt_cheats_enabled_by_default = u8!0x1",
+            "replacement":"dmnt_cheats_enabled_by_default = u8!0x0"
+        }
+    ]
+}

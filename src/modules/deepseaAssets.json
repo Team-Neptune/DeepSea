@@ -1,0 +1,10 @@
+{
+    "repo":"Team-Neptune/DeepSea-Assets",
+    "assetRegex":[".*DeepSea-Assets.*\\.zip"],
+    "customSteps":[
+        {
+            "action": "extract",
+            "source": ".*DeepSea-Assets.*\\.zip"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "repo":"fortheusers/hb-appstore",
+    "assetRegex":[".*switch-extracttosd.*\\.zip"],
+    "customSteps":[
+        {
+            "action": "extract",
+            "source": ".*switch-extracttosd.*\\.zip"
+        }
+    ]
+}

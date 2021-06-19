@@ -1,0 +1,10 @@
+{
+    "repo":"Team-Neptune/DeepSea-Cleaner",
+    "assetRegex":[".*DeepSea-Cleaner.*\\.zip"],
+    "customSteps":[
+        {
+            "action": "extract",
+            "source": ".*DeepSea-Cleaner.*\\.zip"
+        }
+    ]
+}

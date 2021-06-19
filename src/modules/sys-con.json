@@ -1,0 +1,10 @@
+{
+    "repo":"cathery/sys-con",
+    "assetRegex":[".*sys-con.*\\.zip"],
+    "customSteps":[
+        {
+            "action": "extract",
+            "source": ".*sys-con.*\\.zip"
+        }
+    ]
+}

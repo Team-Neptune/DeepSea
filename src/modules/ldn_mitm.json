@@ -1,0 +1,10 @@
+{
+    "repo":"spacemeowx2/ldn_mitm",
+    "assetRegex":[".*ldn_mitm.*\\.zip"],
+    "customSteps":[
+        {
+            "action": "extract",
+            "source": ".*ldn_mitm.*\\.zip"
+        }
+    ]
+}

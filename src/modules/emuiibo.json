@@ -1,0 +1,28 @@
+{
+    "repo":"XorTroll/emuiibo",
+    "assetRegex":[".*emuiibo.*\\.zip"],
+    "customSteps":[
+        {
+            "action": "extract",
+            "source": ".*emuiibo.*\\.zip"
+        },
+        {
+            "action": "move",
+            "source": "SdOut/atmosphere",
+            "destination": "atmosphere"
+        },
+        {
+            "action": "move",
+            "source": "SdOut/switch",
+            "destination": "switch"
+        },
+        {
+            "action": "delete",
+            "source": "SdOut"
+        },
+        {
+            "action": "delete",
+            "source": "atmosphere/contents/0100000000000352/flags/boot2.flag"
+        }
+    ]
+}

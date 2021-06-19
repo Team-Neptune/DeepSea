@@ -1,0 +1,15 @@
+{
+    "repo":"WerWolv/ovl-sysmodules",
+    "assetRegex":[".*ovlSysmodules.*\\.ovl"],
+    "customSteps":[
+        {
+            "action": "createDir",
+            "source": "switch/.overlays"
+        },
+        {
+            "action": "move",
+            "source": "ovlSysmodules.ovl",
+            "destination": "switch/.overlays/ovlSysmodules.ovl"
+        }
+    ]
+}

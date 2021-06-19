@@ -1,0 +1,15 @@
+{
+    "repo":"liuervehc/nxmtp",
+    "assetRegex":[".*\\.nro"],
+    "customSteps":[
+        {
+            "action": "createDir",
+            "source": "switch/nxmtp"
+        },
+        {
+            "action": "move",
+            "source": "nxmtp.nro",
+            "destination": "switch/nxmtp/nxmtp.nro"
+        }
+    ]
+}

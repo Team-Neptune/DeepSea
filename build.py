@@ -63,6 +63,10 @@ if __name__ == '__main__':
                             if customStep["action"] == "replaceText":
                                 print("- custom step: " + customStep["action"] + " -> " + customStep["source"])
                                 fs.replaceText(moduleName, customStep["source"], customStep["target"], customStep["replacement"])
+
+                            if customStep["action"] == "createToolboxJson":
+                                print("- custom step: " + customStep["action"] + " -> " + customStep["source"])
+                                fs.createToolboxJson(moduleName, customStep["source"], customStep["requires_reboot"] )
                     else:
                         print("Already downloaded: " + module["repo"])
 

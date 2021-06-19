@@ -6,6 +6,7 @@ import json
 import os
 import re
 import zipfile
+from os.path import normpath, basename
 
 class FS():
     def __init__(self):
@@ -89,3 +90,14 @@ class FS():
         fin = open(path, "wt")
         fin.write(data)
         fin.close()
+
+    def createToolboxJson(self, modulename, source, requires_reboot):
+        path = Path(Path.joinpath(self.workdir, modulename, source, "toolbox.json"))
+        tid = basename(normpath(source))
+        data = {
+            "name"  : modulename,
+            "tid"   : tid,
+            "requires_reboot": requires_reboot
+        }
+        with open(path, 'w') as f:
+            json.dump(data, f, indent=4)

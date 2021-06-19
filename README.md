@@ -42,7 +42,7 @@ Send the Hekate payload to your Switch in RCM mode and launch the CFW
 | [Atmosphère](https://github.com/Atmosphere-NX/Atmosphere) | ✅ | ✅ | ✅ |
 | [DeepSea Assets](https://github.com/Team-Neptune/DeepSea-Assets) | ✅ | ✅ | ✅ |
 | [DeepSea Cleaner](https://github.com/Team-Neptune/DeepSea-Cleaner) | ✅ | ✅ |  |
-| [DeepSea CPR](https://github.com/Team-Neptune/CommonProblemFixer) | ✅ | ✅ |  |
+| [DeepSea CPR](https://github.com/Team-Neptune/CommonProblemResolver) | ✅ | ✅ |  |
 | [DeepSea Toolbox](https://github.com/Team-Neptune/DeepSea-Toolbox) | ✅ | ✅ |  |
 | [EdiZon](https://github.com/WerWolv/EdiZon) | ✅ | ✅ |  |
 | [Emuiibo](https://github.com/XorTroll/emuiibo) | ✅ | ✅ |  |

@@ -37,30 +37,34 @@ Send the Hekate payload to your Switch in RCM mode and launch the CFW
 
 ## Featuring
 
-| Software | Normal Package | Minimal Package |
-| -------- | :-------------: | :------------: |
-| [Atmosphère](https://github.com/Atmosphere-NX/Atmosphere) | ✅ | ✅ |
-| [Hekate](https://github.com/CTCaer/hekate) | ✅ | ✅ |
-| [Homebrew App Store](https://gitlab.com/4TU/hb-appstore) | ✅ | ✅ |
-| [EdiZon](https://github.com/WerWolv/EdiZon) | ✅ |  |
-| [emuiibo](https://github.com/XorTroll/emuiibo) | ✅ |  |
-| [TinWoo](https://github.com/mrdude2478/TinWoo) | ✅ |  |
-| [DeepSea Toolbox](https://github.com/Team-Neptune/DeepSea-Toolbox) | ✅ |  |
-| [DeepSea Cleaner](https://github.com/Team-Neptune/DeepSea-Cleaner) | ✅ |  |
-| [DeepSea Assets](https://github.com/Team-Neptune/DeepSea-Assets) | ✅ | ✅ |
-| [aio-switch-updater](https://github.com/HamletDuFromage/aio-switch-updater) | ✅ |  |
-| [JKSV](https://github.com/J-D-K/JKSV) | ✅ |  |
-| [nxmtp](https://github.com/liuervehc/nxmtp) | ✅ |  |
-| [Tesla-Menu](https://github.com/WerWolv/Tesla-Menu) | ✅ |  |
-| [nx-ovlloader](https://github.com/WerWolv/nx-ovlloader) | ✅ |  |
-| [ovlSysmodules](https://github.com/WerWolv/ovl-sysmodules) | ✅ |  |
-| [Status Monitor Overlay](https://github.com/masagrator/Status-Monitor-Overlay) | ✅ |  |
-| [sys-clk](https://github.com/retronx-team/sys-clk) | ✅ |  |
-| [sys-con](https://github.com/cathery/sys-con) | ✅ |  |
+| Software | Advanced Package| Normal Package | Minimal Package |
+| -------- | :-------------: | :------------: | :------------: |
+| [Atmosphère](https://github.com/Atmosphere-NX/Atmosphere) | ✅ | ✅ | ✅ |
+| [DeepSea Assets](https://github.com/Team-Neptune/DeepSea-Assets) | ✅ | ✅ | ✅ |
+| [DeepSea Cleaner](https://github.com/Team-Neptune/DeepSea-Cleaner) | ✅ | ✅ |  |
+| [DeepSea CPR](https://github.com/Team-Neptune/CommonProblemFixer) | ✅ | ✅ |  |
+| [DeepSea Toolbox](https://github.com/Team-Neptune/DeepSea-Toolbox) | ✅ | ✅ |  |
+| [EdiZon](https://github.com/WerWolv/EdiZon) | ✅ | ✅ |  |
+| [Emuiibo](https://github.com/XorTroll/emuiibo) | ✅ | ✅ |  |
+| [Hekate](https://github.com/CTCaer/hekate) | ✅ | ✅ | ✅ |
+| [Homebrew App Store](https://gitlab.com/4TU/hb-appstore) | ✅ | ✅ | ✅ |
+| [JKSV](https://github.com/J-D-K/JKSV) | ✅ | ✅ |  |
+| [ldn_mitm](https://github.com/spacemeowx2/ldn_mitm) | ✅ | ✅ |  |
 | [MissionControl](https://github.com/ndeadly/MissionControl) | ✅ |  |
-| [sys-ftpd-light](https://github.com/cathery/sys-ftpd-light) | ✅ |  |
-| [ldn_mitm](https://github.com/spacemeowx2/ldn_mitm) | ✅ |  |
+| [nx-ovlloader](https://github.com/WerWolv/nx-ovlloader) | ✅ | ✅ |  |
 | [NX-Shell](https://github.com/joel16/NX-Shell) | ✅ |  |  |
+| [nxmtp](https://github.com/liuervehc/nxmtp) | ✅ | ✅ |  |
+| [ovlSysmodules](https://github.com/WerWolv/ovl-sysmodules) | ✅ | ✅ |  |
+| [Status Monitor Overlay](https://github.com/masagrator/Status-Monitor-Overlay) | ✅ |  |
+| [Switch-aio-updater](https://github.com/HamletDuFromage/aio-switch-updater) | ✅ | ✅ |  |
+| [sys-clk](https://github.com/retronx-team/sys-clk) | ✅ |  |
+| [sys-con](https://github.com/cathery/sys-con) | ✅ | ✅ |  |
+| [sys-ftpd-light](https://github.com/cathery/sys-ftpd-light) | ✅ | ✅ |  |
+| [TegraExplorer](https://github.com/joel16/NX-Shell) | ✅ |  |  |
+| [Tesla-Menu](https://github.com/WerWolv/Tesla-Menu) | ✅ | ✅ |  |
+| [TinWoo](https://github.com/mrdude2478/TinWoo) | ✅ | ✅ |  |
+
+
 
 
 ## Credits

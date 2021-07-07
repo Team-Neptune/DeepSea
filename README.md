@@ -66,7 +66,6 @@ Send the Hekate payload to your Switch in RCM mode and launch the CFW
 
 
 
-
 ## Credits
 * Thanks to all the previous members of Team AtlasNX for laying the groundwork for DeepSea.
 * And a huge thanks to all the awesome homebrew developers!

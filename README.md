@@ -62,7 +62,6 @@ Send the Hekate payload to your Switch in RCM mode and launch the CFW
 | [ldn_mitm](https://github.com/spacemeowx2/ldn_mitm) | ✅ |  |
 | [NX-Shell](https://github.com/joel16/NX-Shell) | ✅ |  |  |
 
-
 ## Credits
 * Thanks to all the previous members of Team AtlasNX for laying the groundwork for DeepSea.
 * And a huge thanks to all the awesome homebrew developers!

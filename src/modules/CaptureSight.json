@@ -1,0 +1,32 @@
+{
+    "repo":"zaksabeast/CaptureSight",
+    "assetRegex":["CaptureSight-Applet.zip", "CaptureSight-Overlay.zip"],
+    "customSteps":[
+        {
+            "action": "createDir",
+            "source": "switch/.overlays"
+        },
+        {
+            "action": "createDir",
+            "source": "switch/CaptureSight"
+        },
+        {
+            "action": "extract",
+            "source": "CaptureSight-Overlay.zip"
+        },
+        {
+            "action": "extract",
+            "source": "CaptureSight-Applet.zip"
+        },
+        {
+            "action": "move",
+            "source": "CaptureSight-Overlay.ovl",
+            "destination": "switch/.overlays/CaptureSight-Overlay.ovl"
+        },
+        {
+            "action": "move",
+            "source": "CaptureSight.nro",
+            "destination": "switch/CaptureSight/CaptureSight.nro"
+        }
+    ]
+}

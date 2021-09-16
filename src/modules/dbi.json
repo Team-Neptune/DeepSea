@@ -1,0 +1,20 @@
+{
+    "repo":"rashevskyv/dbi",
+    "assetRegex":["dbi.config", "DBI.nro"],
+    "customSteps":[
+        {
+            "action": "createDir",
+            "source": "switch/DBI"
+        },
+        {
+            "action": "move",
+            "source": "dbi.config",
+            "destination": "switch/DBI/dbi.config"
+        },
+        {
+            "action": "move",
+            "source": "DBI.nro",
+            "destination": "switch/DBI/DBI.nro"
+        }
+    ]
+}

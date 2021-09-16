@@ -1,0 +1,19 @@
+{
+    "repo":"rdmrocha/linkalho",
+    "assetRegex":[".*linkalho.*\\.zip"],
+    "customSteps":[
+        {
+            "action": "extract",
+            "source": ".*linkalho.*\\.zip"
+        },
+        {
+            "action": "createDir",
+            "source": "switch/linkalho"
+        },
+        {
+            "action": "move",
+            "source": "linkalho.nro",
+            "destination": "switch/linkalho/linkalho.nro"
+        }
+    ]
+}

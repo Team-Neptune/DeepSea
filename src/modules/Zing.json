@@ -1,0 +1,15 @@
+{
+    "repo":"tomvita/Zing",
+    "assetRegex":[".*Breeze-Overlay.*\\.ovl"],
+    "customSteps":[
+        {
+            "action": "createDir",
+            "source": "switch/.overlays"
+        },
+        {
+            "action": "move",
+            "source": "Breeze-Overlay.ovl",
+            "destination": "switch/.overlays/Breeze-Overlay.ovl"
+        }
+    ]
+}

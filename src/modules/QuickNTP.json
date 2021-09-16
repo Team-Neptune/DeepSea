@@ -1,0 +1,15 @@
+{
+    "repo":"nedex/QuickNTP",
+    "assetRegex":[".*QuickNTP.*\\.ovl"],
+    "customSteps":[
+        {
+            "action": "createDir",
+            "source": "switch/.overlays"
+        },
+        {
+            "action": "move",
+            "source": "QuickNTP.ovl",
+            "destination": "switch/.overlays/QuickNTP.ovl"
+        }
+    ]
+}

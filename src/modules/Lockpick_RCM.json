@@ -1,0 +1,15 @@
+{
+    "repo":"shchmue/Lockpick_RCM",
+    "assetRegex":[".*\\.bin"],
+    "customSteps":[
+        {
+            "action": "createDir",
+            "source": "bootloader/payloads"
+        },
+        {
+            "action": "move",
+            "source": "Lockpick_RCM.bin",
+            "destination": "bootloader/payloads/Lockpick_RCM.bin"
+        }
+    ]
+}

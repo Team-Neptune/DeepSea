@@ -1,0 +1,10 @@
+{
+    "repo":"tomvita/Breeze-Beta",
+    "assetRegex":["Breeze.zip"],
+    "customSteps":[
+        {
+            "action": "extract",
+            "source": ".*Breeze.*\\.zip"
+        }
+    ]
+}

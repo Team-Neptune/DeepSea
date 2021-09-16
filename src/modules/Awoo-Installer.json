@@ -1,0 +1,10 @@
+{
+    "repo":"Huntereb/Awoo-Installer",
+    "assetRegex":["Awoo-Installer.zip"],
+    "customSteps":[
+        {
+            "action": "extract",
+            "source": ".*Awoo-Installer.*\\.zip"
+        }
+    ]
+}

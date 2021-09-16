@@ -1,0 +1,15 @@
+{
+    "repo":"CompSciOrBust/Amiigo",
+    "assetRegex":["Amiigo.nro"],
+    "customSteps":[
+        {
+            "action": "createDir",
+            "source": "switch/Amiigo"
+        },
+        {
+            "action": "move",
+            "source": "Amiigo.nro",
+            "destination": "switch/Amiigo/Amiigo.nro"
+        }
+    ]
+}

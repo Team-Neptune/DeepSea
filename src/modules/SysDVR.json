@@ -1,0 +1,14 @@
+{
+    "repo":"exelix11/SysDVR",
+    "assetRegex":["SysDVR.zip"],
+    "customSteps":[
+        {
+            "action": "extract",
+            "source": "SysDVR.zip"
+        },
+        {
+            "action": "delete",
+            "source": "atmosphere/contents/00FF0000A53BB665/flags/boot2.flag"
+        }
+    ]
+}

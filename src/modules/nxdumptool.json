@@ -1,0 +1,15 @@
+{
+    "repo":"DarkMatterCore/nxdumptool",
+    "assetRegex":[".*nxdumptool.*\\.nro"],
+    "customSteps":[
+        {
+            "action": "createDir",
+            "source": "switch/nxdumptool"
+        },
+        {
+            "action": "move",
+            "source": "nxdumptool.nro",
+            "destination": "switch/nxdumptool/nxdumptool.nro"
+        }
+    ]
+}

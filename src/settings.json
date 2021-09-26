@@ -1,5 +1,5 @@
 {
-    "version": "3.1.0",
+    "version": "3.2.0",
     "packages":{
         "minimal":{
             "active": true,
@@ -23,7 +23,7 @@
                 "aioUpdater", "edizon", "emuiibo", "jksv", "nxmtp", "tinwoo",
                 "ldn_mitm", "sys-clk", "sys-con","sys-ftpd-light",
                 "nx-ovlloader", "ovl-sysmodules", "Tesla-Menu", "Status-Monitor-Overlay",
-                "deepseaCPR", "TegraExplorer", "NX-Shell", "MissionControl", "ldn_mitm"
+                "deepseaCPR", "TegraExplorer", "NX-Shell", "MissionControl"
             ]
         }
     }

@@ -27,7 +27,7 @@ jobs:
       run: |
         if [ -f ./requirements.txt ]; then pip3 install -r ./requirements.txt; fi
         
-    - name: Create DeepSea Packages
+    - name: Create ShallowSea Packages
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: | 

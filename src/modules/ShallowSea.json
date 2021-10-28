@@ -1,0 +1,10 @@
+{
+    "repo":"carcaschoi/ShallowSea",
+    "assetRegex":[".*ShallowSea-ams.*\\.zip"],
+    "customSteps":[
+        {
+            "action": "extract",
+            "source": ".*ShallowSea-ams.*\\.zip"
+        }
+    ]
+}

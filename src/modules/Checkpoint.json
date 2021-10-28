@@ -1,0 +1,15 @@
+{
+    "repo":"SciresM/Checkpoint",
+    "assetRegex":[".*\\.nro"],
+    "customSteps":[
+        {
+            "action": "createDir",
+            "source": "switch/Checkpoint"
+        },
+        {
+            "action": "move",
+            "source": "JKSV.nro",
+            "destination": "switch/Checkpoint/Checkpoint.nro"
+        }
+    ]
+}

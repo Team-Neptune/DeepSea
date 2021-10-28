@@ -1,0 +1,10 @@
+{
+    "repo":"bakatrouble/sys-screenuploader",
+    "assetRegex":[".*sys-screenuploader.*\\.zip"],
+    "customSteps":[
+        {
+            "action": "extract",
+            "source": ".*sys-screenuploader.*\\.zip"
+        }
+    ]
+}

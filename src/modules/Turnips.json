@@ -1,0 +1,15 @@
+{
+    "repo":"averne/Turnips",
+    "assetRegex":[".*\\.nro"],
+    "customSteps":[
+        {
+            "action": "createDir",
+            "source": "switch/Turnips"
+        },
+        {
+            "action": "move",
+            "source": "JKSV.nro",
+            "destination": "switch/Turnips/Turnips.nro"
+        }
+    ]
+}

@@ -4,7 +4,7 @@
         "advanced":{
             "active": true,
             "modules": [
-                "ShallowSea, Checkpoint, funkin-rewritten, sys-screenuploader, Turnips"
+                "Checkpoint, ShallowSea, funkin-rewritten, Turnips, sys-screenuploader"
             ]
         }
     }

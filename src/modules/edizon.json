@@ -1,0 +1,24 @@
+{
+    "repo":"WerWolv/EdiZon",
+    "assetRegex":[".*EdiZon.*\\.nro", ".*ovlEdiZon.*\\.ovl"],
+    "customSteps":[
+        {
+            "action": "createDir",
+            "source": "switch/.overlays"
+        },
+        {
+            "action": "createDir",
+            "source": "switch/edizon"
+        },
+        {
+            "action": "move",
+            "source": "EdiZon.nro",
+            "destination": "switch/edizon/EdiZon.nro"
+        },
+        {
+            "action": "move",
+            "source": "ovlEdiZon.ovl",
+            "destination": "switch/.overlays/ovlEdiZon.ovl"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "repo":"WerWolv/Tesla-Menu",
+    "assetRegex":[".*ovlmenu.*\\.zip"],
+    "customSteps":[
+        {
+            "action": "extract",
+            "source": ".*ovlmenu.*\\.zip"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "repo":"suchmememanyskill/TegraExplorer",
+    "assetRegex":[".*\\.bin"],
+    "customSteps":[
+        {
+            "action": "createDir",
+            "source": "bootloader/payloads"
+        },
+        {
+            "action": "move",
+            "source": "TegraExplorer.bin",
+            "destination": "bootloader/payloads/TegraExplorer.bin"
+        }
+    ]
+}

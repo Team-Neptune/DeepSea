@@ -1,0 +1,19 @@
+{
+    "repo":"spacemeowx2/ldn_mitm",
+    "assetRegex":[".*ldn_mitm.*\\.zip"],
+    "customSteps":[
+        {
+            "action": "extract",
+            "source": ".*ldn_mitm.*\\.zip"
+        },
+        {
+            "action": "delete",
+            "source": "atmosphere/contents/4200000000000010/flags/boot2.flag"
+        },
+        {
+            "action": "createToolboxJson",
+            "source": "atmosphere/contents/4200000000000010/",
+            "requires_reboot": true
+        }
+    ]
+}

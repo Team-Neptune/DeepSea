@@ -4,7 +4,7 @@
         "advanced":{
             "active": true,
             "modules": [
-                "ShallowSea", "Checkpoint", "funkin-rewritten", "Turnips", "sys-screenuploader"
+               "Checkpoint", "funkin-rewritten", "Turnips", "sys-screenuploader", "atmosphere", "hekate", "hb-appstore", "aioUpdater", "edizon", "emuiibo", "jksv", "nxmtp", "tinwoo", "ldn_mitm", "sys-clk", "sys-con","sys-ftpd-light", "nx-ovlloader", "ovl-sysmodules", "Tesla-Menu", "Status-Monitor-Overlay", "TegraExplorer", "NX-Shell"
             ]
         }
     }

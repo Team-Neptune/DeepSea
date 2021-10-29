@@ -1,0 +1,15 @@
+{
+    "repo":"J-D-K/JKSV",
+    "assetRegex":[".*\\.nro"],
+    "customSteps":[
+        {
+            "action": "createDir",
+            "source": "switch/jksv"
+        },
+        {
+            "action": "move",
+            "source": "JKSV.nro",
+            "destination": "switch/jksv/JKSV.nro"
+        }
+    ]
+}

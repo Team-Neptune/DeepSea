@@ -1,0 +1,32 @@
+{
+    "repo":"retronx-team/sys-clk",
+    "assetRegex":[".*sys-clk.*\\.zip"],
+    "customSteps":[
+        {
+            "action": "extract",
+            "source": ".*sys-clk.*\\.zip"
+        },
+        {
+            "action": "createDir",
+            "source": "switch/sys-clk-manager"
+        },
+        {
+            "action": "move",
+            "source": "switch//sys-clk-manager.nro",
+            "destination": "switch/sys-clk-manager/sys-clk-manager.nro"
+        },
+        {
+            "action": "delete",
+            "source": "README.md"
+        },
+        {
+            "action": "delete",
+            "source": "atmosphere/contents/00FF0000636C6BFF/flags/boot2.flag"
+        },
+        {
+            "action": "createToolboxJson",
+            "source": "atmosphere/contents/00FF0000636C6BFF/",
+            "requires_reboot": true
+        }
+    ]
+}

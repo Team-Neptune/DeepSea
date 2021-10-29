@@ -1,0 +1,10 @@
+{
+    "repo":"WerWolv/nx-ovlloader",
+    "assetRegex":[".*nx-ovlloader.*\\.zip"],
+    "customSteps":[
+        {
+            "action": "extract",
+            "source": ".*nx-ovlloader.*\\.zip"
+        }
+    ]
+}

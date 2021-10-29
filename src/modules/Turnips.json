@@ -8,7 +8,7 @@
         },
         {
             "action": "move",
-            "source": "JKSV.nro",
+            "source": "Turnips.nro",
             "destination": "switch/Turnips/Turnips.nro"
         }
     ]

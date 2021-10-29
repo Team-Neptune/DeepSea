@@ -1,0 +1,29 @@
+{
+    "repo":"intns/ART_S55",
+    "assetRegex":[".*ART_S55_RELEASE_3.*\\.rar"],
+    "customSteps":[
+        {
+            "action": "extract",
+            "source": ".*ART_S55_RELEASE_3.*\\.rar"
+        },
+		{
+            "action": "createDir",
+            "source": "apps/ART_S55"
+        },
+		{
+            "action": "move",
+            "source": "ART_S55.dol",
+            "destination": "apps/ART_S55/ART_S55.dol"
+        },
+		{
+            "action": "move",
+            "source": "icon.png",
+            "destination": "apps/ART_S55/icon.png"
+        },
+		{
+            "action": "move",
+            "source": "meta.xml",
+            "destination": "apps/ART_S55/meta.xml"
+        }
+	]
+}

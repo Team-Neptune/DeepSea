@@ -1,0 +1,10 @@
+{
+    "repo":"dborth/wiimc",
+    "assetRegex":[".*WiiMC.1.3.4.New.Install.*\\.zip"],
+    "customSteps":[
+        {
+            "action": "extract",
+            "source": ".*WiiMC.1.3.4.New.Install.*\\.zip"
+        }
+	]
+}

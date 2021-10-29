@@ -8,7 +8,7 @@
         },
         {
             "action": "move",
-            "source": "JKSV.nro",
+            "source": "Checkpoint.nro",
             "destination": "switch/Checkpoint/Checkpoint.nro"
         }
     ]

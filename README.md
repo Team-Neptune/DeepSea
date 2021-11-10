@@ -18,18 +18,18 @@
 - Update OFW & CFW through homebrew
 - Find new homebrew through the Appstore
 - Savegame management
-- Cheating in games (please dont cheat online)
-- Emulate Amiibos
+- Cheating in games (please don't cheat online)
+- Emulate Amiibo
 - Use all kinds of 3rd party controllers
 - Lan play (like Hamachi for your Switch)
-- Tesla overlay to controll all those features (press L1+DpadDown+RightStick)
+- Tesla overlay to control all those features (press L1+DpadDown+RightStick)
 
 
 **Please check out our [wiki](https://github.com/Team-Neptune/DeepSea/wiki) to learn about the best features**
 
 
 ## How to use
-Follow this guide to hack your switch: https://switch.homebrew.guide
+Follow this guide to hack your Switch: https://switch.homebrew.guide
 
 Download the latest release and put it on your SD Card<br />
 Send the Hekate payload to your Switch in RCM mode and launch the CFW
@@ -39,6 +39,7 @@ Send the Hekate payload to your Switch in RCM mode and launch the CFW
 
 | Software | Advanced Package| Normal Package | Minimal Package |
 | -------- | :-------------: | :------------: | :------------: |
+| [AIO-switch-updater](https://github.com/HamletDuFromage/aio-switch-updater) | ✅ | ✅ |  |
 | [Atmosphère](https://github.com/Atmosphere-NX/Atmosphere) | ✅ | ✅ | ✅ |
 | [DeepSea Assets](https://github.com/Team-Neptune/DeepSea-Assets) | ✅ | ✅ | ✅ |
 | [DeepSea Cleaner](https://github.com/Team-Neptune/DeepSea-Cleaner) | ✅ | ✅ |  |
@@ -56,7 +57,6 @@ Send the Hekate payload to your Switch in RCM mode and launch the CFW
 | [nxmtp](https://github.com/liuervehc/nxmtp) | ✅ | ✅ |  |
 | [ovlSysmodules](https://github.com/WerWolv/ovl-sysmodules) | ✅ | ✅ |  |
 | [Status Monitor Overlay](https://github.com/masagrator/Status-Monitor-Overlay) | ✅ |  |
-| [Switch-aio-updater](https://github.com/HamletDuFromage/aio-switch-updater) | ✅ | ✅ |  |
 | [sys-clk](https://github.com/retronx-team/sys-clk) | ✅ |  |
 | [sys-con](https://github.com/cathery/sys-con) | ✅ |  |  |
 | [sys-ftpd-light](https://github.com/cathery/sys-ftpd-light) | ✅ | ✅ |  |

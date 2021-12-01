@@ -21,7 +21,7 @@
                 "atmosphere", "hekate", "deepseaAssets", "hb-appstore", 
                 "deepseaToolbox", "deepseaCleaner",
                 "aioUpdater", "edizon", "emuiibo", "jksv", "nxmtp", "tinwoo",
-                "ldn_mitm", "sys-clk", "sys-con","sys-ftpd-light",
+                "sys-clk", "sys-con","sys-ftpd-light",
                 "nx-ovlloader", "ovl-sysmodules", "Tesla-Menu", "Status-Monitor-Overlay",
                 "deepseaCPR", "TegraExplorer", "NX-Shell", "MissionControl"
             ]

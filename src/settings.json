@@ -22,7 +22,7 @@
                 "deepseaToolbox", "deepseaCleaner",
                 "aioUpdater", "edizon", "emuiibo", "jksv", "nxmtp", "tinwoo",
                 "sys-clk", "sys-con","sys-ftpd-light",
-                "nx-ovlloader", "ovl-sysmodules", "Tesla-Menu", "Status-Monitor-Overlay",
+                "ldn_mitm", "nx-ovlloader", "ovl-sysmodules", "Tesla-Menu", "Status-Monitor-Overlay",
                 "deepseaCPR", "TegraExplorer", "NX-Shell", "MissionControl"
             ]
         }

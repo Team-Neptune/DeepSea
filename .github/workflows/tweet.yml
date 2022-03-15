@@ -15,6 +15,10 @@ jobs:
       with:
         python-version: 3.9.10
 
+    - name: Install tweepy
+      run: |
+        pip3 install tweepy
+
     - name: tweet
       run: | 
         python -c "import tweepy as A;B=A.Client(bearer_token='${{ secrets.TWITTER_BEARER_TOKEN }}');B=A.Client(consumer_key='${{ secrets.TWITTER_CONSUMER_KEY }}',consumer_secret='${{ secrets.TWITTER_CONSUMER_SECRET }}',access_token='${{ secrets.TWITTER_ACCESS_TOKEN }}',access_token_secret='${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}');B.create_tweet(text='Hey! We\'ve got a new release out for DeepSea. Check it out here: https://github.com/Team-Neptune/DeepSea/releases/latest')"

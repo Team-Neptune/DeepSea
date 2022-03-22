@@ -1,4 +1,4 @@
-<img src="assets/deepsea_wide_tr_an.gif" align="center" width="100%" />
+<img src="assets/deepsea_wide_v2.png" align="center" width="100%" />
 <p align="center">
     The new All-in-One CFW package for the Nintendo Switch.</br>
     <a href="https://discord.gg/VkaRjYN">

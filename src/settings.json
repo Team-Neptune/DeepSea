@@ -332,6 +332,22 @@
                 {
                     "name": "delete",
                     "arguments": ["atmosphere/contents/420000000000000E/flags/boot2.flag"]
+                },
+                {
+                    "name": "replace_content",
+                    "arguments": [
+                        "config/sys-ftpd/config.ini",
+                        "user:=",
+                        "user:=deepsea"
+                    ]
+                },
+                {
+                    "name": "replace_content",
+                    "arguments": [
+                        "config/sys-ftpd/config.ini",
+                        "password:=",
+                        "password:=secretpass"
+                    ]
                 }
             ]
         },

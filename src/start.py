@@ -8,7 +8,6 @@ if __name__ == '__main__':
     
   parser = argparse.ArgumentParser(description="TeamNeptune's DeepSea build script.")
   requiredNamed = parser.add_argument_group('Options required to build a release candidate')
-  requiredNamed.add_argument('-v', '--version', help='DeepSea version tag', required=True)
   requiredNamed.add_argument('-gt', '--githubToken', help='Github Token', required=True)
   args = parser.parse_args()
 

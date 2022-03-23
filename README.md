@@ -1,11 +1,11 @@
-<img src="assets/deepsea_wide_tr_an.gif" align="center" width="100%" />
+<img src="assets/banner.png" align="center" width="100%" />
 <p align="center">
     The new All-in-One CFW package for the Nintendo Switch.</br>
     <a href="https://discord.gg/VkaRjYN">
-        <img alt="Discord" src="https://img.shields.io/discord/703301751171973190?label=Join%20DeepSea%20on%20Discord">
+        <img alt="Discord" src="https://img.shields.io/discord/703301751171973190?label=Join%20DeepSea%20on%20Discord&style=flat-square">
     </a> 
-    <img alt="GitHub All Releases" src="https://img.shields.io/github/downloads/Team-Neptune/DeepSea/total?label=Total%20downloads">
-    <img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/Team-Neptune/DeepSea/BuildRelease?label=Build">
+    <img alt="GitHub All Releases" src="https://img.shields.io/github/downloads/Team-Neptune/DeepSea/total?label=Total%20downloads&style=flat-square">
+    <img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/Team-Neptune/DeepSea/BuildRelease?label=Build&style=flat-square">
 </p>
 
 ---

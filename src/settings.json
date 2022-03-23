@@ -208,7 +208,7 @@
                     "arguments": ["EdiZon.nro", "switch/edizon/EdiZon.nro"]
                 },
                 {
-                    "name": "create_dir",
+                    "name": "move",
                     "arguments": ["switch/.overlays", "switch/.overlays/ovlEdiZon.ovl"]
                 }
             ]

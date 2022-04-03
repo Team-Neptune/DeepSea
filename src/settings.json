@@ -1,5 +1,5 @@
 {
-    "releaseVersion": "5.0.0",
+    "releaseVersion": "4.0.0",
     "packages": [
         {
             "name": "minimal",
@@ -53,7 +53,6 @@
                 "sysclk",
                 "syscon",
                 "sysftpdlight",
-                "ldn_mitm",
                 "nxovlloader",
                 "ovlsysmodules",
                 "teslamenu",

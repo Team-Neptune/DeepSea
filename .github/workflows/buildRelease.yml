@@ -18,7 +18,7 @@ jobs:
       
     - id: set-version
       run: |
-        version=$(python -c 'import sys, json; f=open("./src/settings.json");print(json.loads(f.read())["releaseVersion"])')
+        version=$(python -c 'import sys, json; f=open("./settings.json");print(json.loads(f.read())["releaseVersion"])')
         echo "::set-output name=version::$version"
         
     - name: Set up Python 3.9
@@ -28,13 +28,13 @@ jobs:
 
     - name: Install dependencies
       run: |
-        if [ -f ./requirements.txt ]; then pip3 install -r ./requirements.txt; fi
+        if [ -f ../requirements.txt ]; then pip3 install -r ../requirements.txt; fi
         
     - name: Create DeepSea Packages
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: | 
-        python ./src/start.py -gt="$GITHUB_TOKEN"
+        python ./start.py -gt="$GITHUB_TOKEN"
 
     - name: Create Release
       run: |

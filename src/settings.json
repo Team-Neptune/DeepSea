@@ -1,29 +1,475 @@
 {
-    "version": "3.5.0",
-    "packages":{
-        "minimal":{
-            "active": true,
-            "modules": ["atmosphere", "hekate", "deepseaAssets", "hb-appstore"]
-        },
-        "normal":{
+    "releaseVersion": "4.0.0",
+    "packages": [
+        {
+            "name": "minimal",
             "active": true,
             "modules": [
-                "atmosphere", "hekate", "deepseaAssets", "hb-appstore", 
-                "deepseaToolbox", "deepseaCleaner",
-                "aioUpdater", "edizon", "emuiibo", "jksv", "nxmtp", "tinwoo",
-                "sys-ftpd-light", "nx-ovlloader", "ovl-sysmodules", "Tesla-Menu",
-                "deepseaCPR"
+                "atmosphere",
+                "hekate",
+                "deepseaassets",
+                "hbappstore"
             ]
         },
-        "advanced":{
+        {
+            "name": "normal",
             "active": true,
             "modules": [
-                "atmosphere", "hekate", "deepseaAssets", "hb-appstore", 
-                "deepseaToolbox", "deepseaCleaner",
-                "aioUpdater", "edizon", "emuiibo", "jksv", "nxmtp", "tinwoo",
-                "ldn_mitm", "sys-clk", "sys-con","sys-ftpd-light",
-                "nx-ovlloader", "ovl-sysmodules", "Tesla-Menu", "Status-Monitor-Overlay",
-                "deepseaCPR", "TegraExplorer", "NX-Shell", "MissionControl"
+                "atmosphere",
+                "hekate",
+                "deepseaassets",
+                "hbappstore",
+                "deepseatoolbox",
+                "deepseacleaner",
+                "aioupdater",
+                "edizon",
+                "emuiibo",
+                "jksv",
+                "nxmtp",
+                "tinwoo",
+                "sysftpdlight",
+                "nxovlloader",
+                "ovlsysmodules",
+                "teslamenu",
+                "deepseacpr"
+            ]
+        },
+        {
+            "name": "advanced",
+            "active": true,
+            "modules": [
+                "atmosphere",
+                "hekate",
+                "deepseaassets",
+                "hbappstore",
+                "deepseatoolbox",
+                "deepseacleaner",
+                "aioupdater",
+                "edizon",
+                "emuiibo",
+                "jksv",
+                "nxmtp",
+                "tinwoo",
+                "sysclk",
+                "syscon",
+                "sysftpdlight",
+                "nxovlloader",
+                "ovlsysmodules",
+                "teslamenu",
+                "statusmonitoroverlay",
+                "deepseacpr",
+                "tegraexplorer",
+                "nxshell",
+                "missioncontrol"
+            ]
+        }
+    ],
+    "moduleList": {
+        "atmosphere": {
+            "repo": "Atmosphere-NX/Atmosphere",
+            "regex": [
+                ".*atmosphere.*\\.zip"
+            ],
+            "steps": [
+                {
+                    "name": "extract",
+                    "arguments": [
+                        ".*atmosphere.*\\.zip"
+                    ]
+                },
+                {
+                    "name": "delete",
+                    "arguments": [
+                        "switch/reboot_to_payload.nro"
+                    ]
+                },
+                {
+                    "name": "create_dir",
+                    "arguments": [
+                        "atmosphere/contents"
+                    ]
+                },
+                {
+                    "name": "copy",
+                    "arguments": [
+                        "atmosphere/config_templates/system_settings.ini",
+                        "atmosphere/config/system_settings.ini"
+                    ]
+                },
+                {
+                    "name": "replace_content",
+                    "arguments": [
+                        "atmosphere/config/system_settings.ini",
+                        "; dmnt_cheats_enabled_by_default = u8!0x1",
+                        "dmnt_cheats_enabled_by_default = u8!0x0"
+                    ]
+                }
+            ]
+        },
+        "hekate": {
+            "repo": "CTCaer/hekate",
+            "regex": [
+                ".*hekate.*\\.zip"
+            ],
+            "steps": [
+                {
+                    "name": "extract",
+                    "arguments": [".*hekate.*\\.zip"]
+                },
+                {
+                    "name": "copy",
+                    "arguments": ["bootloader/hekate_*", "bootloader/update.bin"]
+                },
+                {
+                    "name": "createDir",
+                    "arguments": ["atmosphere"]
+                },
+                {
+                    "name": "copy",
+                    "arguments": ["bootloader/hekate_*", "atmosphere/reboot_payload.bin"]
+                }
+            ]
+        },
+        "deepseaassets": {
+            "repo": "Team-Neptune/DeepSea-Assets",
+            "regex": [
+                ".*DeepSea-Assets.*\\.zip"
+            ],
+            "steps": [
+                {
+                    "name": "extract",
+                    "arguments": [
+                        ".*DeepSea-Assets.*\\.zip"
+                    ]
+                }
+            ]
+        },
+        "hbappstore": {
+            "repo": "fortheusers/hb-appstore",
+            "regex": [".*switch-extracttosd.*\\.zip"],
+            "steps": [
+                {
+                    "name": "extract",
+                    "arguments": [
+                        ".*switch-extracttosd.*\\.zip"
+                    ]
+                }
+            ]
+        },
+        "deepseatoolbox": {
+            "repo": "Team-Neptune/DeepSea-Toolbox",
+            "regex": [".*\\.nro"],
+            "steps": [
+                {
+                    "name": "create_dir",
+                    "arguments": ["switch/DeepSea-Toolbox"]
+                },
+                {
+                    "name": "move",
+                    "arguments": ["DeepSeaToolbox.nro", "switch/DeepSea-Toolbox/DeepSeaToolbox.nro"]
+                }
+            ]
+        },
+        "deepseacleaner": {
+            "repo": "Team-Neptune/DeepSea-Cleaner",
+            "regex": [".*DeepSea-Cleaner.*\\.zip"],
+            "steps": [
+                {
+                    "name": "extract",
+                    "arguments": [".*DeepSea-Cleaner.*\\.zip"]
+                }
+            ]
+        },
+        "aioupdater": {
+            "repo": "HamletDuFromage/aio-switch-updater",
+            "regex": [".*aio-switch-updater.*\\.zip"],
+            "steps": [
+                {
+                    "name": "extract",
+                    "arguments": [".*aio-switch-updater.*\\.zip"]
+                }
+            ]
+        },
+        "edizon": {
+            "repo": "WerWolv/EdiZon",
+            "regex": [".*EdiZon.*\\.nro", ".*ovlEdiZon.*\\.ovl"],
+            "steps": [
+                {
+                    "name": "create_dir",
+                    "arguments": ["switch/.overlays"]
+                },
+                {
+                    "name": "create_dir",
+                    "arguments": ["switch/edizon"]
+                },
+                {
+                    "name": "move",
+                    "arguments": ["EdiZon.nro", "switch/edizon/EdiZon.nro"]
+                },
+                {
+                    "name": "move",
+                    "arguments": ["ovlEdiZon.ovl", "switch/.overlays/ovlEdiZon.ovl"]
+                }
+            ]
+        },
+        "emuiibo": {
+            "repo": "XorTroll/emuiibo",
+            "regex": [".*emuiibo.*\\.zip"],
+            "steps": [
+                {
+                    "name": "extract",
+                    "arguments": [".*emuiibo.*\\.zip"]
+                },
+                {
+                    "name": "move",
+                    "arguments": ["SdOut/atmosphere", "atmosphere"]
+                },
+                {
+                    "name": "move",
+                    "arguments": ["SdOut/switch", "switch"]
+                },
+                {
+                    "name": "delete",
+                    "arguments": ["SdOut"]
+                },
+                {
+                    "name": "delete",
+                    "arguments": ["atmosphere/contents/0100000000000352/flags/boot2.flag"]
+                }
+            ]
+        },
+        "jksv": {
+            "repo": "J-D-K/JKSV",
+            "regex": [".*\\.nro"],
+            "steps": [
+                {
+                    "name": "create_dir",
+                    "arguments": ["switch/jksv"]
+                },
+                {
+                    "name": "move",
+                    "arguments": ["JKSV.nro", "switch/jksv"]
+                }
+            ]
+        },
+        "nxmtp": {
+            "repo": "liuervehc/nxmtp",
+            "regex": [".*\\.nro"],
+            "steps": [
+                {
+                    "name": "create_dir",
+                    "arguments": ["switch/nxmtp"]
+                },
+                {
+                    "name": "move",
+                    "arguments": ["nxmtp.nro", "switch/nxmtp"]
+                }
+            ]
+        },
+        "tinwoo": {
+            "repo": "mrdude2478/TinWoo",
+            "regex": [".*TinWoo-Installer.*\\.zip"],
+            "steps": [
+                {
+                    "name": "extract",
+                    "arguments": [".*TinWoo-Installer.*\\.zip"]
+                }
+            ]
+        },
+        "sysclk": {
+            "repo": "retronx-team/sys-clk",
+            "regex": [".*sys-clk.*\\.zip"],
+            "steps": [
+                {
+                    "name": "extract",
+                    "arguments": [".*sys-clk.*\\.zip"]
+                },
+                {
+                    "name": "create_dir",
+                    "arguments": ["switch/sys-clk-manager"]
+                },
+                {
+                    "name": "move",
+                    "arguments": ["switch/sys-clk-manager.nro", "switch/sys-clk-manager/sys-clk-manager.nro"]
+                },
+                {
+                    "name": "delete",
+                    "arguments": ["README.md"]
+                },
+                {
+                    "name": "delete",
+                    "arguments": ["atmosphere/contents/00FF0000636C6BFF/flags/boot2.flag"]
+                },
+                {
+                    "name": "create_file",
+                    "arguments": ["atmosphere/contents/00FF0000636C6BFF/toolbox.json", "{\"name\": \"sys-clk\",\"tid\": \"00FF0000636C6BFF\",\"requires_reboot\": true}"]
+                }
+            ]
+        },
+        "syscon": {
+            "repo": "cathery/sys-con",
+            "regex": [".*sys-con.*\\.zip"],
+            "steps": [
+                {
+                    "name": "extract",
+                    "arguments": [".*sys-con.*\\.zip"]
+                },
+                {
+                    "name": "delete",
+                    "arguments": ["atmosphere/contents/690000000000000D/flags/boot2.flag"]
+                }
+            ]
+        },
+        "sysftpdlight": {
+            "repo": "cathery/sys-ftpd-light",
+            "regex": [".*sys-ftpd-light.*\\.zip"],
+            "steps": [
+                {
+                    "name": "extract",
+                    "arguments": [".*sys-ftpd-light.*\\.zip"]
+                },
+                {
+                    "name": "delete",
+                    "arguments": ["atmosphere/contents/420000000000000E/flags/boot2.flag"]
+                },
+                {
+                    "name": "replace_content",
+                    "arguments": [
+                        "config/sys-ftpd/config.ini",
+                        "user:=",
+                        "user:=deepsea"
+                    ]
+                },
+                {
+                    "name": "replace_content",
+                    "arguments": [
+                        "config/sys-ftpd/config.ini",
+                        "password:=",
+                        "password:=secretpass"
+                    ]
+                }
+            ]
+        },
+        "ldn_mitm": {
+            "repo": "spacemeowx2/ldn_mitm",
+            "regex": [".*ldn_mitm.*\\.zip"],
+            "steps": [
+                {
+                    "name": "extract",
+                    "arguments": [".*ldn_mitm.*\\.zip"]
+                },
+                {
+                    "name": "delete",
+                    "arguments": ["atmosphere/contents/4200000000000010/flags/boot2.flag"]
+                },
+                {
+                    "name": "create_file",
+                    "arguments": ["atmosphere/contents/4200000000000010/toolbox.json", "{\"name\": \"ldn_mitm\",\"tid\": \"4200000000000010\",\"requires_reboot\": true}"]
+                }
+            ]
+        },
+        "nxovlloader": {
+            "repo": "WerWolv/nx-ovlloader",
+            "regex": [".*nx-ovlloader.*\\.zip"],
+            "steps": [
+                {
+                    "name": "extract",
+                    "arguments": [".*nx-ovlloader.*\\.zip"]
+                }
+            ]
+        },
+        "ovlsysmodules": {
+            "repo": "WerWolv/ovl-sysmodules",
+            "regex": [".*ovlSysmodules.*\\.ovl"],
+            "steps": [
+                {
+                    "name": "create_dir",
+                    "arguments": ["switch/.overlays"]
+                },
+                {
+                    "name": "move",
+                    "arguments": ["ovlSysmodules.ovl", "switch/.overlays/ovlSysmodules.ovl"]
+                }
+            ]
+        },
+        "teslamenu": {
+            "repo": "WerWolv/Tesla-Menu",
+            "regex": [".*ovlmenu.*\\.zip"],
+            "steps": [
+                {
+                    "name": "extract",
+                    "arguments": [".*ovlmenu.*\\.zip"]
+                }
+            ]
+        },
+        "statusmonitoroverlay": {
+            "repo": "masagrator/Status-Monitor-Overlay",
+            "regex": [".*Status-Monitor-Overlay.*\\.ovl"],
+            "steps": [
+                {
+                    "name": "create_dir",
+                    "arguments": ["switch/.overlays"]
+                },
+                {
+                    "name": "move",
+                    "arguments": ["Status-Monitor-Overlay.ovl", "switch/.overlays/Status-Monitor-Overlay.ovl"]
+                }
+            ]
+        },
+        "deepseacpr": {
+            "repo": "Team-Neptune/CommonProblemResolver",
+            "regex": [".*\\.bin"],
+            "steps": [
+                {
+                    "name": "create_dir",
+                    "arguments": ["bootloader/payloads"]
+                },
+                {
+                    "name": "move",
+                    "arguments": ["CommonProblemResolver.bin", "bootloader/payloads/CommonProblemResolver.bin"]
+                }
+            ]
+        },
+        "tegraexplorer": {
+            "repo": "suchmememanyskill/TegraExplorer",
+            "regex": [".*\\.bin"],
+            "steps": [
+                {
+                    "name": "create_dir",
+                    "arguments": ["bootloader/payloads"]
+                },
+                {
+                    "name": "move",
+                    "arguments": ["TegraExplorer.bin", "bootloader/payloads/TegraExplorer.bin"]
+                }
+            ]
+        },
+        "nxshell": {
+            "repo": "joel16/NX-Shell",
+            "regex": [".*NX-Shell.*\\.nro"],
+            "steps": [
+                {
+                    "name": "create_dir",
+                    "arguments": ["switch/NX-Shell"]
+                },
+                {
+                    "name": "move",
+                    "arguments": ["NX-Shell.nro", "switch/NX-Shell/NX-Shell.nro"]
+                }
+            ]
+        },
+        "missioncontrol": {
+            "repo": "ndeadly/MissionControl",
+            "regex": [".*MissionControl.*\\.zip"],
+            "steps": [
+                {
+                    "name": "extract",
+                    "arguments": [".*MissionControl.*\\.zip"]
+                },
+                {
+                    "name": "delete",
+                    "arguments": ["atmosphere/contents/010000000000bd00/flags/boot2.flag"]
+                }
             ]
         }
     }

@@ -4,7 +4,10 @@ on:
   push:
     branches:
       - master
-      - rewrite
+
+defaults:
+  run:
+    working-directory: src
 
 jobs:
   build:
@@ -15,13 +18,13 @@ jobs:
       
     - id: set-version
       run: |
-        version=$(cat ./VERSION | python -c 'import sys, json; f=open("./src/settings.json");print(json.loads(f.read())["version"])')
+        version=$(cat ./VERSION | python -c 'import sys, json; f=open("./settings.json");print(json.loads(f.read())["releaseVersion"])')
         echo "::set-output name=version::$version"
         
     - name: Set up Python 3.9
       uses: actions/setup-python@v1
       with:
-        python-version: 3.9.10
+        python-version: '3.x'
 
     - name: Install dependencies
       run: |
@@ -31,7 +34,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: | 
-        python ./build.py -gt="$GITHUB_TOKEN" -v="v${{ steps.set-version.outputs.version }}"
+        python ./build.py -gt="$GITHUB_TOKEN"
 
     - name: Create Release
       run: |

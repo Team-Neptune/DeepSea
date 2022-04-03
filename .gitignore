@@ -1,8 +1,7 @@
-config.py
-.vscode
-tmp/
-switch_out/
-*.zip
+src/base/*
+src/tmp/*
+src/sd/*
+src/*.zip
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

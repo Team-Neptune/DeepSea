@@ -18,7 +18,7 @@ jobs:
       
     - id: set-version
       run: |
-        version=$(cat ./VERSION | python -c 'import sys, json; f=open("./settings.json");print(json.loads(f.read())["releaseVersion"])')
+        version=$(cat ./VERSION | python -c 'import sys, json; f=open("./src/settings.json");print(json.loads(f.read())["releaseVersion"])')
         echo "::set-output name=version::$version"
         
     - name: Set up Python 3.9
@@ -34,7 +34,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: | 
-        python ./build.py -gt="$GITHUB_TOKEN"
+        python ./src/start.py -gt="$GITHUB_TOKEN"
 
     - name: Create Release
       run: |

@@ -18,7 +18,7 @@ jobs:
       
     - id: set-version
       run: |
-        version=$(cat ./VERSION | python -c 'import sys, json; f=open("./src/settings.json");print(json.loads(f.read())["releaseVersion"])')
+        version=$(python -c 'import sys, json; f=open("./src/settings.json");print(json.loads(f.read())["releaseVersion"])')
         echo "::set-output name=version::$version"
         
     - name: Set up Python 3.9

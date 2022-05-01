@@ -1,5 +1,5 @@
 {
-    "releaseVersion": "4.1.0",
+    "releaseVersion": "4.2.0",
     "packages": [
         {
             "name": "minimal",
@@ -59,7 +59,8 @@
                 "statusmonitoroverlay",
                 "deepseacpr",
                 "tegraexplorer",
-                "nxshell"
+                "nxshell",
+				"missioncontrol"
             ]
         }
     ],

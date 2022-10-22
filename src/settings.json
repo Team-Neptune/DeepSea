@@ -224,6 +224,10 @@
                 },
                 {
                     "name": "move",
+                    "arguments": ["SdOut/switch", "emuiibo"]
+                },
+                {
+                    "name": "move",
                     "arguments": ["SdOut/switch", "switch"]
                 },
                 {

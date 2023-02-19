@@ -197,6 +197,10 @@
                 {
                     "name": "extract",
                     "arguments": [".*EdiZon.*\\.zip"]
+                },
+                {
+                    "name": "delete",
+                    "arguments": ["switch/breeze/.Breeze.nro.star"]
                 }
             ]
         },

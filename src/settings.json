@@ -1,5 +1,5 @@
 {
-    "releaseVersion": "4.3.0",
+    "releaseVersion": "4.4.0",
     "packages": [
         {
             "name": "minimal",
@@ -22,6 +22,7 @@
                 "deepseatoolbox",
                 "aioupdater",
                 "edizon",
+                "edizon-ovl",
                 "emuiibo",
                 "jksv",
                 "nxmtp",
@@ -44,6 +45,7 @@
                 "deepseatoolbox",
                 "aioupdater",
                 "edizon",
+                "edizon-ovl",
                 "emuiibo",
                 "jksv",
                 "nxmtp",
@@ -189,24 +191,22 @@
             ]
         },
         "edizon": {
-            "repo": "WerWolv/EdiZon",
-            "regex": [".*EdiZon.*\\.nro", ".*ovlEdiZon.*\\.ovl"],
+            "repo": "tomvita/EdiZon-SE",
+            "regex": [".*EdiZon.*\\.zip"],
             "steps": [
                 {
-                    "name": "create_dir",
-                    "arguments": ["switch/.overlays"]
-                },
+                    "name": "extract",
+                    "arguments": [".*EdiZon.*\\.zip"]
+                }
+            ]
+        },
+        "edizon-ovl": {
+            "repo": "proferabg/EdiZon-Overlay",
+            "regex": [".*EdiZon-Overlay.*\\.zip"],
+            "steps": [
                 {
-                    "name": "create_dir",
-                    "arguments": ["switch/edizon"]
-                },
-                {
-                    "name": "move",
-                    "arguments": ["EdiZon.nro", "switch/edizon/EdiZon.nro"]
-                },
-                {
-                    "name": "move",
-                    "arguments": ["ovlEdiZon.ovl", "switch/.overlays/ovlEdiZon.ovl"]
+                    "name": "extract",
+                    "arguments": [".*EdiZon-Overlay.*\\.zip"]
                 }
             ]
         },

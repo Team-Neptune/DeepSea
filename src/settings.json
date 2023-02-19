@@ -200,7 +200,7 @@
                 },
                 {
                     "name": "delete",
-                    "arguments": ["switch/breeze/.Breeze.nro.star"]
+                    "arguments": ["switch/breeze"]
                 }
             ]
         },

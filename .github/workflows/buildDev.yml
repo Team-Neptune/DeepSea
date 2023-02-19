@@ -1,0 +1,48 @@
+name: BuildRelease
+
+on:
+  push:
+    branches:
+      - dev
+
+defaults:
+  run:
+    working-directory: src
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+      
+    - id: set-version
+      run: |
+        version=$(python -c 'import sys, json; f=open("./settings.json");print(json.loads(f.read())["releaseVersion"])')
+        echo "::set-output name=version::$version"
+        
+    - name: Set up Python 3.9
+      uses: actions/setup-python@v1
+      with:
+        python-version: '3.x'
+
+    - name: Install dependencies
+      run: |
+        if [ -f ../requirements.txt ]; then pip3 install -r ../requirements.txt; fi
+        
+    - name: Create DeepSea Packages
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: | 
+        python ./start.py -gt="$GITHUB_TOKEN"
+
+    - name: Create DevRelease
+      run: |
+        set -x
+        assets=()
+        for asset in ./*.zip; do
+          assets+=("-a" "$asset")
+        done
+        hub release create "${assets[@]}" -d -m "DevRelease v${{ steps.set-version.outputs.version }}" "v${{ steps.set-version.outputs.version }}"
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -1,5 +1,5 @@
 {
-    "releaseVersion": "4.4.0",
+    "releaseVersion": "4.5.0",
     "packages": [
         {
             "name": "minimal",
@@ -30,7 +30,6 @@
                 "sysftpdlight",
                 "nxovlloader",
                 "ovlsysmodules",
-                "teslamenu",
                 "deepseacpr"
             ]
         },
@@ -55,7 +54,6 @@
                 "sysftpdlight",
                 "nxovlloader",
                 "ovlsysmodules",
-                "teslamenu",
                 "statusmonitoroverlay",
                 "deepseacpr",
                 "tegraexplorer",

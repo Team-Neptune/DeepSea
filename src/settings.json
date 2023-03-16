@@ -30,6 +30,7 @@
                 "sysftpdlight",
                 "nxovlloader",
                 "ovlsysmodules",
+				"teslamenu",
                 "deepseacpr"
             ]
         },
@@ -56,6 +57,7 @@
                 "deepseacpr",
                 "tegraexplorer",
                 "nxshell",
+				"teslamenu",
 				"missioncontrol"
             ]
         }

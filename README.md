@@ -13,7 +13,7 @@
 ## Features
 
 - Background FTP server for filetransfers
-- Install NSP, NSZ, XCI & XCZ files from Harddrive, Google Drive, WLAN or wired through PC, Smartphone, etc
+- Install NSP, NSZ, XCI & XCZ files from Harddrive, Google Drive, WiFi or wired through PC, Smartphone, etc
 - Over & Underclocking
 - Update OFW & CFW through homebrew
 - Find new homebrew through the Appstore

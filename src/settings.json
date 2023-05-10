@@ -1,5 +1,5 @@
 {
-    "releaseVersion": "4.5.0",
+    "releaseVersion": "4.6.0",
     "packages": [
         {
             "name": "minimal",
@@ -25,12 +25,11 @@
                 "edizon-ovl",
                 "emuiibo",
                 "jksv",
-                "nxmtp",
                 "tinwoo",
                 "sysftpdlight",
                 "nxovlloader",
                 "ovlsysmodules",
-				"teslamenu",
+                "teslamenu",
                 "deepseacpr"
             ]
         },
@@ -46,19 +45,21 @@
                 "aioupdater",
                 "edizon",
                 "edizon-ovl",
+                "emuiibo",
                 "jksv",
-                "nxmtp",
                 "tinwoo",
+                "sysclk",
                 "syscon",
                 "sysftpdlight",
                 "nxovlloader",
                 "ovlsysmodules",
+                "teslamenu",
                 "statusmonitoroverlay",
                 "deepseacpr",
                 "tegraexplorer",
                 "nxshell",
-				"teslamenu",
-				"missioncontrol"
+				"missioncontrol",
+				"ldn_mitm"
             ]
         }
     ],
@@ -226,7 +227,7 @@
                 },
                 {
                     "name": "move",
-                    "arguments": ["SdOut/switch", "emuiibo"]
+                    "arguments": ["SdOut/emuiibo", "emuiibo"]
                 },
                 {
                     "name": "move",
@@ -253,20 +254,6 @@
                 {
                     "name": "move",
                     "arguments": ["JKSV.nro", "switch/jksv"]
-                }
-            ]
-        },
-        "nxmtp": {
-            "repo": "liuervehc/nxmtp",
-            "regex": [".*\\.nro"],
-            "steps": [
-                {
-                    "name": "create_dir",
-                    "arguments": ["switch/nxmtp"]
-                },
-                {
-                    "name": "move",
-                    "arguments": ["nxmtp.nro", "switch/nxmtp"]
                 }
             ]
         },
@@ -397,7 +384,7 @@
             ]
         },
         "teslamenu": {
-            "repo": "WerWolv/Tesla-Menu",
+            "repo": "hax4dazy/Tesla-Menu",
             "regex": [".*ovlmenu.*\\.zip"],
             "steps": [
                 {

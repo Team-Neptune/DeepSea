@@ -58,8 +58,8 @@
                 "deepseacpr",
                 "tegraexplorer",
                 "nxshell",
-				"missioncontrol",
-				"ldn_mitm"
+		"missioncontrol",
+		"ldn_mitm"
             ]
         }
     ],

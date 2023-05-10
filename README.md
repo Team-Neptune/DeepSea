@@ -13,7 +13,7 @@
 ## Features
 
 - Background FTP server for filetransfers
-- Install NSP, NSZ, XCI & XCZ files from Harddrive, Google Drive, WLAN or wired through PC, Smartphone, etc
+- Install NSP, NSZ, XCI & XCZ files from Harddrive, Google Drive, WiFi or wired through PC, Smartphone, etc
 - Over & Underclocking
 - Update OFW & CFW through homebrew
 - Find new homebrew through the Appstore
@@ -55,7 +55,6 @@ Send the Hekate payload to your Switch in RCM mode and launch the CFW
 | [MissionControl](https://github.com/ndeadly/MissionControl) | ✅ |  |  |
 | [nx-ovlloader](https://github.com/WerWolv/nx-ovlloader) | ✅ | ✅ |  |
 | [NX-Shell](https://github.com/joel16/NX-Shell) | ✅ |  |  |
-| [nxmtp](https://github.com/liuervehc/nxmtp) | ✅ | ✅ |  |
 | [ovlSysmodules](https://github.com/WerWolv/ovl-sysmodules) | ✅ | ✅ |  |
 | [Status Monitor Overlay](https://github.com/masagrator/Status-Monitor-Overlay) | ✅ |  |
 | [sys-clk](https://github.com/retronx-team/sys-clk) | ✅ |  |

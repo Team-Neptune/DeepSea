@@ -222,6 +222,10 @@
                     "arguments": [".*emuiibo.*\\.zip"]
                 },
                 {
+                    "name": "delete",
+                    "arguments": ["SdOut/atmosphere/contents/0100000000000352/flags/boot2.flag"]
+                },
+                {
                     "name": "move",
                     "arguments": ["SdOut/atmosphere", "atmosphere"]
                 },
@@ -236,10 +240,6 @@
                 {
                     "name": "delete",
                     "arguments": ["SdOut"]
-                },
-                {
-                    "name": "delete",
-                    "arguments": ["atmosphere/contents/0100000000000352/flags/boot2.flag"]
                 }
             ]
         },

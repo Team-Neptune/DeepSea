@@ -1,4 +1,4 @@
-name: BuildRelease
+name: BuildDev
 
 on:
   push:

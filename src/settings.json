@@ -258,7 +258,7 @@
             ]
         },
         "tinwoo": {
-            "repo": "mrdude2478/TinWoo",
+            "repo": "hax4dazy/TinWoo",
             "regex": [".*TinWoo-Installer.*\\.zip"],
             "steps": [
                 {

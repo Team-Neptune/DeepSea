@@ -21,8 +21,9 @@ jobs:
         version=$(python -c 'import sys, json; f=open("./settings.json");print(json.loads(f.read())["releaseVersion"])')
         echo "::set-output name=version::$version"
 
-    - name: Install hub
-      uses: geertvdc/setup-hub@master
+    - name: Set up hub
+      run: |
+        sudo apt install hub -y
 
     - name: Set up Python 3.9
       uses: actions/setup-python@v1

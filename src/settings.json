@@ -1,5 +1,5 @@
 {
-    "releaseVersion": "4.7.0",
+    "releaseVersion": "4.8.0",
     "packages": [
         {
             "name": "minimal",
@@ -258,7 +258,7 @@
             ]
         },
         "tinwoo": {
-            "repo": "mrdude2478/TinWoo",
+            "repo": "hax4dazy/TinWoo",
             "regex": [".*TinWoo-Installer.*\\.zip"],
             "steps": [
                 {
@@ -312,7 +312,7 @@
             ]
         },
         "sysftpdlight": {
-            "repo": "cathery/sys-ftpd-light",
+            "repo": "cathery/sys-ftpd",
             "regex": [".*sys-ftpd-light.*\\.zip"],
             "steps": [
                 {

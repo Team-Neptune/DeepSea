@@ -62,7 +62,7 @@ Send the Hekate payload to your Switch in RCM mode and launch the CFW
 | [sys-ftpd-light](https://github.com/cathery/sys-ftpd-light) | ✅ | ✅ |  |
 | [TegraExplorer](https://github.com/joel16/NX-Shell) | ✅ |  |  |
 | [Tesla-Menu](https://github.com/WerWolv/Tesla-Menu) | ✅ | ✅ |  |
-| [TinWoo](https://github.com/mrdude2478/TinWoo) | ✅ | ✅ |  |
+| [Goldleaf](https://github.com/XorTroll/Goldleaf) | ✅ | ✅ |  |
 
 
 

@@ -398,15 +398,11 @@
         },
         "statusmonitoroverlay": {
             "repo": "masagrator/Status-Monitor-Overlay",
-            "regex": [".*Status-Monitor-Overlay.*\\.ovl"],
+            "regex": [".*Status-Monitor-Overlay.*\\.zip"],
             "steps": [
                 {
-                    "name": "create_dir",
-                    "arguments": ["switch/.overlays"]
-                },
-                {
-                    "name": "move",
-                    "arguments": ["Status-Monitor-Overlay.ovl", "switch/.overlays/Status-Monitor-Overlay.ovl"]
+                    "name": "extract",
+                    "arguments": [".*Status-Monitor-Overlay.*\\.zip"]
                 }
             ]
         },

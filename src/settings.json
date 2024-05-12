@@ -1,5 +1,5 @@
 {
-    "releaseVersion": "5.0.0",
+    "releaseVersion": "4.10.0",
     "packages": [
         {
             "name": "minimal",
